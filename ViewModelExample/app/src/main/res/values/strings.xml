@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">View Model Test</string>
+    <string name="addText">Add Text</string>
+    <string name="sendTextToFrag">Send Text</string>
+
+
+
+</resources>
