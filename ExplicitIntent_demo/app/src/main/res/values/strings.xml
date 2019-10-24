@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ExplicitIntent_demo</string>
+    <string name="question_asked">Question Asked</string>
+    <string name="ask_question">Ask Question</string>
+    <string name="enter_question">Enter Question</string>
+    <string name="answer_question">Answer Question</string>
+    <string name="answer_given">Answer Given</string>
+    <string name="activityCBtn">Send Back String</string>
+    <string name="toActC">Go to Activity C</string>
+</resources>
