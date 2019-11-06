@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Project REST JSON</string>
+    <string name="coupon_store">Coupon Store</string>
+    <string name="coupon_text">Coupon Text</string>
+    <string name="coupon_expire_date">Expiration Date</string>
+    <string name="coupon_category_msg">Category: </string>
+    <string name="coupon_category">Coupon Category</string>
+    <string name="coupon_code">coupon_code</string>
+    <string name="coupon_expire_msg">Expires on: </string>
+
+</resources>
