@@ -42,8 +42,7 @@ public class MainActivity extends AppCompatActivity {
         //GET THE URL STRING TO THE JASON FILE
         String url = "http://198.199.80.235/cps276/cps276_examples/datasources/coupons_json_251.json";
 
-
-        // CREATES AN INSTANCE OF A JSONOBJECT REQUEST
+        // CREATES AN INSTANCE OF A JsonObjectRequest AND PASS IN SOME PARAMETERS
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
 
                 //WE ARE SENDING A GET REQUEST (WE ARE GETTING A FILE)
@@ -60,12 +59,10 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONObject response) {
 
-                        // USE METHOD fromJson TO DESERALIZE THE SPECIFED JSON INTO AN OBJECT OF THE SPECIFIED CLASS.                  // of the specified class
+                        // USE METHOD fromJson TO DESERALIZE THE SPECIFIED JSON INTO AN OBJECT OF THE SPECIFIED CLASS
                         Coupons coupons = gson.fromJson(response.toString(), Coupons.class);
 
-
-                        //GETS THE COUPON LIST FROM COUPONSWRAPPER AND PUTS IT INTO cpnlst AND ADDS IT AS A PARAMTER
-                        //TO THE RecyclerViewAdaptor() CONSTRUCTOR
+                        //GETS THE COUPON LIST FROM THE COUPONS CLASS AND PUTS IT INTO cpnlst AND ADDS IT AS A PARAMETER TO THE RecyclerViewAdaptor() CONSTRUCTOR
                         ArrayList<Coupons> cpnlst = coupons.getCouponList();
                         RecyclerViewAdapter adapter = new RecyclerViewAdapter(cpnlst);
                         recyclerView.setAdapter(adapter);

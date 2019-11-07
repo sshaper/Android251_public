@@ -9,45 +9,32 @@ public class Coupons {
     private String couponCode;
     private String category;
 
+    //THIS IS AN ARRAY LIST THAT CONTAINS ALL THE CARD DATA
     private ArrayList<Coupons> coupons;
     public ArrayList<Coupons> getCouponList() {
         return coupons;
     }
 
-    //METHODS FOR GETTING AND SETTING EACH COUPON
+    //METHODS FOR GETTING EACH COUPON
     public String getStore() {
         return store;
-    }
-    public void setStore(String store) {
-        this.store = store;
     }
 
     public String getCoupon() {
         return coupon;
     }
-    public void setCoupon(String coupon) {
-        this.coupon = coupon;
-    }
 
     public String getExpiryDate() {
         return expiryDate;
-    }
-    public void setExpiryDate(String expiryDate) {
-        this.expiryDate = expiryDate;
     }
 
     public String getCouponCode() {
         return couponCode;
     }
-    public void setCouponCode(String couponCode) {
-        this.couponCode = couponCode;
-    }
 
     public String getCouponCategory() {
         return category;
     }
-    public void setCouponCategory(String couponCode) {
-        this.category = category;
-    }
+
 
 }

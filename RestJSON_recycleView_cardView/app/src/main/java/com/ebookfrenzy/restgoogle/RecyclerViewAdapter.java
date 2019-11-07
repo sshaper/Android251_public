@@ -13,7 +13,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private ArrayList<Coupons> couponsList;
 
 
-    //CREATE CONSTRUCTORE AND ADD LIST
+    //CREATE CONSTRUCTOR AND ADD LIST
     public RecyclerViewAdapter(ArrayList<Coupons> cLst) {
        couponsList = cLst;
     }
@@ -29,6 +29,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(RecyclerViewAdapter.ViewHolder viewHolder, int position) {
+
         //WE GET THE POSITION OF THE COUPON LIST AND THEN CAN GET THE VALUE OF ALL THE COUPONS FROM
         //THE ARRAYLIST
         Coupons coupon = couponsList.get(position);
