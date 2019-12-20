@@ -1,0 +1,21 @@
+apply plugin: 'com.android.dynamic-feature'
+
+android {
+    compileSdkVersion 29
+
+
+    defaultConfig {
+        minSdkVersion 25
+        targetSdkVersion 29
+        versionCode 58
+        versionName "58.0"
+
+    }
+
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':app')
+}

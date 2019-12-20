@@ -1,0 +1,2 @@
+include ':app', ':my_dynamic_feature'
+rootProject.name='DynamicFeature'
