@@ -42,8 +42,8 @@ public class MainActivity extends AppCompatActivity {
 
             Float dollarValue = Float.valueOf(dollarText.getText().toString());
             Float euroValue = dollarValue * 0.85F;
-            //textView.setText(euroValue.toString());
-            textView.setText(String.valueOf(euroValue));
+            textView.setText(euroValue.toString());
+            //textView.setText(String.valueOf(euroValue));
 
         } else {
             textView.setText(R.string.no_value_string);
