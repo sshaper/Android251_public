@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Onclick Resource</string>
+    <string name="button">Click Me!</string>
+</resources>
