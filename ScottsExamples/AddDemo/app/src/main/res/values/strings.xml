@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">Add Demo</string>
-    <string name="addBtn">Add Numbers</string>
-    <string name="answer">Answer will appear here</string>
-    <string name="num1">Enter Number 1</string>
-    <string name="num2">Enter Number 2</string>
-</resources>
