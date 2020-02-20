@@ -54,6 +54,8 @@ public class MainFragment extends Fragment {
                 if (!dollarText.getText().toString().equals("")) {
                     mViewModel.setAmount(dollarText.getText().toString());
                     resultText.setText(mViewModel.getResult().toString());
+
+                    //resultText.setText(dollarText.getText().toString());
                 } else {
                     resultText.setText("No Value");
                 }

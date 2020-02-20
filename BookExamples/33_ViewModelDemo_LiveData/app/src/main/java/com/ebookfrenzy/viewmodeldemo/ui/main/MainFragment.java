@@ -46,14 +46,20 @@ public class MainFragment extends Fragment {
         resultText = getView().findViewById(R.id.resultText);
         convertButton = getView().findViewById(R.id.convertButton);
 
-
+        /*
+        THE CODE BELOW IS THE OBSERVER WHICH LISTENS FOR CHANGES, WHEN DETECTED IT SETS THE
+        RESULT TEXT IT REPLACED THE FOLLOWING LINE
+        resultText.setText(mViewModel.getResult().toString());
+         */
         final Observer<Float> resultObserver = new Observer<Float>() {
             @Override
             public void onChanged(@Nullable final Float result) {
+                //ONLY WHEN THE CHANGE IS DETECTED DOES IT UPDATE THE RESULTTEXT
                 resultText.setText(result.toString());
             }
         };
 
+        //THIS LINE ADDS THE OBESERVER TO THE GETRESULT OF THE MVIEWMODEL
         mViewModel.getResult().observe(this, resultObserver);
 
         convertButton.setOnClickListener(new View.OnClickListener()
@@ -62,6 +68,7 @@ public class MainFragment extends Fragment {
             public void onClick(View v) {
                 if (!dollarText.getText().toString().equals("")) {
                     mViewModel.setAmount(dollarText.getText().toString());
+
                 } else {
                     resultText.setText("No Value");
                 }
