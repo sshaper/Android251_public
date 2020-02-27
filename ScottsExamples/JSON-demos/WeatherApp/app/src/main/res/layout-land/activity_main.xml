@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="24dp"
-        android:onClick="getWeatherBtn"
+        android:onClick="getWeatherUrl"
         android:text="@string/getWeatherBtn"
         app:layout_constraintStart_toEndOf="@+id/editTextZip"
         app:layout_constraintTop_toTopOf="parent" />

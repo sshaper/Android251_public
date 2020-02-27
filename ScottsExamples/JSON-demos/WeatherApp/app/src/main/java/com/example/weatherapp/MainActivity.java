@@ -3,6 +3,7 @@ package com.example.weatherapp;
 //http://api.openweathermap.org/data/2.5/weather?zip=48843&unit=metric&APPID=80d537a4b4cd7a3b10a3c65a70316965
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProviders;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -28,24 +29,27 @@ public class MainActivity extends AppCompatActivity {
     public TextView temp;
     public TextView tempRange;
     public TextView description;
+    private MainViewModel viewModel;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        viewModel = ViewModelProviders.of(this).get(MainViewModel.class);
         dateLocationSentence = findViewById(R.id.dateLocationSentence);
         temp = findViewById(R.id.tempView);
         tempRange = findViewById(R.id.tempRange);
         description = findViewById(R.id.description);
+
+        //I CHECK IF THE MAINVIEWMODEL (CALLED VIEWMODEL) HAS THE JSON STRING STORED, IF SO I CALL PARSEDISPLAY DATA TO DISPLAY IT OTHERWISE WE MOVE ON.  THIS IS HOW I HANDLED THE DEVICE ROTATION.
+        if(viewModel.getJson() != null){
+            parseDisplayData(viewModel.getJson());
+        }
     }
 
-    //I CREATED THIS METHOD FOR THE BUTTON CLICK WHICH JUST CALLS ANOTHER METHOD THAT STARTS THE PROCESS. i HAD TO DO THIS BECAUSE ON RESTORE INSTANCE STATE I NEED TO CALL THE METHOD AGAIN AND I CANNOT CALL THIS ONE BECAUSE OF THE VIEW.
-    public void getWeatherBtn(View v){
-        this.getWeather();
-    }
-
-    //THIS METHOD STARTS THE PROCESS.  HERE I CHECK FOR A ZIP CODE AND THEN I CREATE THE URL AND SENT IT TO GETWEATHERDATA
-    public void getWeather(){
+    //THIS METHOD STARTS THE PROCESS.  HERE I CHECK FOR A ZIP CODE AND THEN I CREATE THE URL AND SEND IT TO GETWEATHERDATA
+    public void getWeatherUrl(View v){
         EditText editTextZip = findViewById(R.id.editTextZip);
         String zip = editTextZip.getText().toString();
         String url;
@@ -59,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
+    //THIS IS WHERE I GET THE WEATHER DATA (JSON)
     private void getWeatherData(String url){
         //HERE I DO THE VOLLEY REQUEST, NOTE THIS IS ALL DONE ON THE MAIN THREAD BUT I HAVE NO OTHER PROCESSES DO IT IS FINE.  PLUS VERY SMALL AMOUNT OF DATA
         RequestQueue queue = Volley.newRequestQueue(this);
@@ -87,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
         queue.add(jsonObjectRequest);
     }
 
-    //HERE WE PARSE THE DATA AND PUT IT IN THE APPROPRATE FIELDS.
+    //HERE WE PARSE THE DATA AND PUT IT IN THE APPROPRIATE FIELDS.
     private void parseDisplayData(String json){
 
         if(json == "ERROR"){
@@ -96,8 +100,9 @@ public class MainActivity extends AppCompatActivity {
         else {
             //THIS IS WHERE I WORK WITH THE OBJECT.
             Log.i(TAG,json);
+            viewModel.setJson(json);
             Gson gson = new Gson();
-            //THE MAIN OBJECT CLASS IS THE MAIN CLASS FOR PARSING THE JSON.  GSON PUTS ALL SUB OBJECTS AND ARRAYS IN SEPERATE CLASSES.  BELOW IS AN EXAMPLE OF THE DATA RETURNED.  THE CLASSES HAVE TO BE THE SAME NAMES AS THE JSON KEYS.  I CREATED COORD, MAIN, SYS, WEATHERARRAY (NOTE WEATHERARRAY IS AN ARRAY THE REFERENCES A CLASS IN ITS LIST...SEE MAINOBJ.JAVA
+            //THE MAIN OBJECT CLASS IS THE MAIN CLASS FOR PARSING THE JSON.  GSON PUTS ALL SUB OBJECTS AND ARRAYS IN SEPARATE CLASSES.  BELOW IS AN EXAMPLE OF THE DATA RETURNED.  THE CLASSES HAVE TO BE THE SAME NAMES AS THE JSON KEYS.  I CREATED COORD, MAIN, SYS, WEATHERARRAY (NOTE WEATHERARRAY IS AN ARRAY THE REFERENCES A CLASS IN ITS LIST...SEE MAINOBJ.JAVA
             MainObj mainObj = gson.fromJson(json, MainObj.class);
 
             dateLocationSentence.setText(mainObj.getDate());
@@ -105,22 +110,6 @@ public class MainActivity extends AppCompatActivity {
             tempRange.setText(mainObj.displayTempRange());
             description.setText(mainObj.weatherDescription());
          }
-    }
-
-    //ALL I DID HERE WAS SET A TEXT STRING IF THE BUTTON WAS CLICKED.  THAT WAY ON ROTATION IT WOULD KNOW TO RECALL THE MAIN FUNCTION.  I COULD HAVE SAVED EACH PART OF THE TEXT BUT I FELT SINCE IT IS SUCH A SMALL CALL I WOULD JUST RECALL THE DATA.
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        CharSequence userText = "buttonClicked";
-        outState.putCharSequence("savedText", userText);
-    }
-    @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        CharSequence userText =  savedInstanceState.getCharSequence("savedText");
-        if(userText == "buttonClicked"){
-            this.getWeather();
-        }
     }
 }
 
