@@ -15,13 +15,13 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
-        binding.name.setText("scott");
+        binding.name.setText("Scott");
         binding.button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                binding.name.setText("shaper");
+                binding.name.getText().toString();
+                binding.name.setText(binding.name.getText() + " Shaper");
             }
         });
-        //binding.name.setText();
     }
 }
