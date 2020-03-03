@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Binding Text Example</string>
+    <string name="change_name">Change Name</string>
+</resources>
