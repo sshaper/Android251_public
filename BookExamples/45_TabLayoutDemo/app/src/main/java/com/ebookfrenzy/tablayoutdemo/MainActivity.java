@@ -43,12 +43,12 @@ public class MainActivity extends AppCompatActivity implements Tab1Fragment.OnFr
 
     private void configureTabLayout() {
         TabLayout tabLayout = findViewById(R.id.tab_layout);
-/*
+
         tabLayout.addTab(tabLayout.newTab().setText("Tab 1 Item"));
         tabLayout.addTab(tabLayout.newTab().setText("Tab 2 Item"));
         tabLayout.addTab(tabLayout.newTab().setText("Tab 3 Item"));
         tabLayout.addTab(tabLayout.newTab().setText("Tab 4 Item"));
-*/
+/*
         tabLayout.addTab(tabLayout.newTab().setIcon(
                 android.R.drawable.ic_dialog_email));
         tabLayout.addTab(tabLayout.newTab().setIcon(
@@ -57,6 +57,8 @@ public class MainActivity extends AppCompatActivity implements Tab1Fragment.OnFr
                 android.R.drawable.ic_dialog_map));
         tabLayout.addTab(tabLayout.newTab().setIcon(
                 android.R.drawable.ic_dialog_info));
+
+ */
 
 
         final ViewPager viewPager = findViewById(R.id.pager);
