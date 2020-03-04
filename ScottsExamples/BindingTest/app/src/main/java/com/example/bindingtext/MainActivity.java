@@ -15,6 +15,9 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
+
+        
+
         binding.name.setText("Scott");
         binding.button.setOnClickListener(new View.OnClickListener() {
             @Override
