@@ -13,8 +13,13 @@ FirstFragment.java
 SecondFragment.java
 
 BlankActivity36NavGraph
-
 Here I used the 3.6 blank activity which includes the navgraph and some starting fragments.  
 I added the safeargs and passed a string.  Very easy.
+
+RecycleViewFragment
+This is an example of running an recycle view in a fragment
+
+RecycleViewFragmentCardView
+This is the same as above example except with the card view addded.  INTERESTING NOTE: I had to use the recycleview and cardview implementations in the gradle file for this project but I did not for the AndroidStudioDevelopmentEssentials3.5 book when doing it for 3.6 
 
 
