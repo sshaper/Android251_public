@@ -1,4 +1,6 @@
-BasicActivity36 is modified to reflect (from memory) the old 3.5 basic activity to create it I deleted the following
+BASICACTIVITY36
+
+I modified the 3.6 basic activity to reflect (from memory) the old 3.5 basic activity to create it I deleted the following
 
 navigation folder and all its content
 
@@ -12,7 +14,8 @@ from the first folder in java
 FirstFragment.java
 SecondFragment.java
 
-BasicActivity36NavGraph
+BASICACTIVITY36NAVGRAPH
+
 Here I used the 3.6 basic activity which includes the navgraph and some starting fragments.  
 I added the safeargs and passed a string.  Very easy.
 
