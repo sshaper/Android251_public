@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     {
         Intent intent = new Intent();
         intent.setAction("com.ebookfrenzy.sendbroadcast");
+        intent.putExtra("MyData"," Scott Shaper");
         intent.addFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES);
         sendBroadcast(intent);
     }

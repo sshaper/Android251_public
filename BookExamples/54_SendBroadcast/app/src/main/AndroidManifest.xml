@@ -12,7 +12,8 @@
         <receiver
             android:name=".MyReceiver"
             android:enabled="true"
-            android:exported="true"></receiver>
+            android:exported="true">
+        </receiver>
 
         <activity android:name=".MainActivity">
             <intent-filter>

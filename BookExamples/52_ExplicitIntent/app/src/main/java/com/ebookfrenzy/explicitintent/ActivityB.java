@@ -25,6 +25,7 @@ public class ActivityB extends AppCompatActivity {
         textView.setText(qString);
     }
 
+    //THE ONCLICK EVENT THAT CALLS THIS FUNCTION IN ADDED TO THE ACTIVITY_B XML FILE
     public void answerQuestion(View view) {
         finish();
     }
