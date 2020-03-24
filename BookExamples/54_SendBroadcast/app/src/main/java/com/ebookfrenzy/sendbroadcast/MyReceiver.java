@@ -21,10 +21,8 @@ public class MyReceiver extends BroadcastReceiver {
             intentData = "";
         }
 
-        String message = "Broadcast intent detected "
-                + intent.getAction() + intentData;
+        String message = "Broadcast intent detected " + intent.getAction() + intentData;
 
-        Toast.makeText(context, message,
-                Toast.LENGTH_LONG).show();
+        Toast.makeText(context, message, Toast.LENGTH_LONG).show();
     }
 }

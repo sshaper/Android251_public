@@ -6,6 +6,7 @@ import java.util.Locale;
 
 import android.app.Service;
 import android.content.Intent;
+import android.os.Handler;
 import android.os.IBinder;
 import android.os.Binder;
 
@@ -22,11 +23,16 @@ public class BoundService extends Service {
     }
 
     public String getCurrentTime() {
-        SimpleDateFormat dateformat =
-                new SimpleDateFormat("HH:mm:ss MM/dd/yyyy",
-                        Locale.US);
+        SimpleDateFormat dateformat = new SimpleDateFormat("HH:mm:ss MM/dd/yyyy", Locale.US);
         return (dateformat.format(new Date()));
     }
+
+    //I ADDED THIS METHOD NOT IN BOOK
+    public String getCurrentName(){
+        final Handler handler = new Handler();
+        return "Scott Shaper";
+    }
+
 
     public class MyLocalBinder extends Binder {
         BoundService getService() {

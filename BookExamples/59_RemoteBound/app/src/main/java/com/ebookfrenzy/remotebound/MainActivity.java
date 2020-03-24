@@ -11,6 +11,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.util.Log;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,8 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Intent intent = new Intent(getApplicationContext(),
-                RemoteService.class);
+        Intent intent = new Intent(getApplicationContext(), RemoteService.class);
 
         bindService(intent, myConnection, Context.BIND_AUTO_CREATE);
     }
@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         Message msg = Message.obtain();
 
         Bundle bundle = new Bundle();
+
         bundle.putString("MyString", "Message Received");
 
         msg.setData(bundle);
@@ -47,20 +48,20 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private ServiceConnection myConnection =
-            new ServiceConnection() {
-                public void onServiceConnected(
-                        ComponentName className,
-                        IBinder service) {
-                    myService = new Messenger(service);
-                    isBound = true;
-                }
+    public static void receivedMessage(String msg){
+        Log.i("test",msg);
+    }
 
-                public void onServiceDisconnected(
-                        ComponentName className) {
-                    myService = null;
-                    isBound = false;
-                }
-            };
+    private ServiceConnection myConnection = new ServiceConnection() {
+        public void onServiceConnected(ComponentName className, IBinder service) {
+            myService = new Messenger(service);
+            isBound = true;
+        }
+
+        public void onServiceDisconnected(ComponentName className) {
+            myService = null;
+            isBound = false;
+        }
+    };
 
 }

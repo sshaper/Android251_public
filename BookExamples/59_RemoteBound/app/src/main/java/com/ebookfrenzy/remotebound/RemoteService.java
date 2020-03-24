@@ -9,6 +9,8 @@ import android.os.Message;
 import android.widget.Toast;
 import android.os.Messenger;
 
+import static com.ebookfrenzy.remotebound.MainActivity.receivedMessage;
+
 public class RemoteService extends Service {
     public RemoteService() {
     }
@@ -19,10 +21,11 @@ public class RemoteService extends Service {
 
             Bundle data = msg.getData();
             String dataString = data.getString("MyString");
-            Toast.makeText(getApplicationContext(),
-                    dataString, Toast.LENGTH_SHORT).show();
+            receivedMessage(dataString);
+            Toast.makeText(getApplicationContext(),dataString, Toast.LENGTH_SHORT).show();
         }
     }
+
 
     final Messenger myMessenger = new Messenger(new IncomingHandler());
 

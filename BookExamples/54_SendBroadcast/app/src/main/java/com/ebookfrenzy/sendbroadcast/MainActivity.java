@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.content.Intent;
+import android.util.Log;
 import android.view.View;
 import android.content.BroadcastReceiver;
 import android.content.IntentFilter;
@@ -11,6 +12,7 @@ import android.content.IntentFilter;
 public class MainActivity extends AppCompatActivity {
 
     BroadcastReceiver receiver;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +34,7 @@ public class MainActivity extends AppCompatActivity {
     private void configureReceiver() {
         IntentFilter filter = new IntentFilter();
         filter.addAction("com.ebookfrenzy.sendbroadcast");
-        filter.addAction(
-                "android.intent.action.ACTION_POWER_DISCONNECTED");
+        filter.addAction("android.intent.action.ACTION_POWER_DISCONNECTED");
         receiver = new MyReceiver();
         registerReceiver(receiver, filter);
     }
