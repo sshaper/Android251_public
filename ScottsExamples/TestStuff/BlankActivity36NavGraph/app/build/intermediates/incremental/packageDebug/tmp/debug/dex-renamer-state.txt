@@ -1,0 +1,7 @@
+#Thu Mar 05 18:51:31 EST 2020
+base.0=C\:\\Users\\17347\\AndroidPublic\\ScottsExamples\\TestStuff\\BlankActivity36NavGraph\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
+path.1=classes.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=C\:\\Users\\17347\\AndroidPublic\\ScottsExamples\\TestStuff\\BlankActivity36NavGraph\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex
