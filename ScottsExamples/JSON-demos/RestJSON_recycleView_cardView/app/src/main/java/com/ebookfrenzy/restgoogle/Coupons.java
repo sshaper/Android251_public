@@ -11,6 +11,7 @@ public class Coupons {
 
     //THIS IS AN ARRAY LIST THAT CONTAINS ALL THE CARD DATA
     private ArrayList<Coupons> coupons;
+
     public ArrayList<Coupons> getCouponList() {
         return coupons;
     }

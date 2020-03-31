@@ -1,0 +1,2 @@
+rootProject.name='RestJSON_recycleView_cardView_androidX'
+include ':app'

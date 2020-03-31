@@ -1,0 +1,2 @@
+rootProject.name='BTCardLayout'
+include ':app'
