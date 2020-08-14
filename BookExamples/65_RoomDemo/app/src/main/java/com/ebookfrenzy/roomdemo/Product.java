@@ -15,7 +15,11 @@ public class Product {
 
     @ColumnInfo(name = "productName")
     private String name;
+
+
     private int quantity;
+
+    //NOTICE THEY DO NOT HAVE ONE FOR QUANTITY BECAUSE IT WILL NOT BE REFERENCED IN SQL STATEMENTS
 
     public Product(String name, int quantity) {
         this.id = id;
@@ -26,6 +30,7 @@ public class Product {
     public int getId() {
         return this.id;
     }
+
     public String getName() {
         return this.name;
     }

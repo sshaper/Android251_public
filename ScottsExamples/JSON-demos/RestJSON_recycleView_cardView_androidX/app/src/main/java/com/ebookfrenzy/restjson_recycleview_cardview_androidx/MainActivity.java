@@ -43,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
         //GET THE URL STRING TO THE JASON FILE
         String url = "http://198.199.80.235/cps276/cps276_examples/datasources/coupons_json_251.json";
 
+        //String url = "http://198.199.80.235/cps276/cps276_examples/datasources/names_json_251v2.json";
+
         // CREATES AN INSTANCE OF A JsonObjectRequest AND PASS IN SOME PARAMETERS
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
 

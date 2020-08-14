@@ -5,11 +5,13 @@ import androidx.lifecycle.MutableLiveData;
 import java.util.List;
 import android.app.Application;
 import androidx.lifecycle.LiveData;
-
+/*
+THE REPOSITORY IS RESPONSIBLE FOR GETTING A ROOM DATABASE INSTANCE, USING THAT INSTANCE TO ACCESS ASSOCIATED
+DAOS AND THEN MAKING CALLS TO DAO METHODS TO PERFORM DATABASE OPERATIONS
+ */
 public class ProductRepository {
 
-    private MutableLiveData<List<Product>> searchResults =
-            new MutableLiveData<>();
+    private MutableLiveData<List<Product>> searchResults = new MutableLiveData<>();
     private LiveData<List<Product>> allProducts;
     private ProductDao productDao;
 
@@ -28,6 +30,9 @@ public class ProductRepository {
         return searchResults;
     }
 
+    /*
+    THE CODE BELOW SETS UP THE ASYNC CALLS TO THE DAO METHODS.  REMEMBER THEY ARE NOT ON A SEPARATE THREAD  BOOK PAGE 518
+    */
     public void insertProduct(Product newproduct) {
         InsertAsyncTask task = new InsertAsyncTask(productDao);
         task.execute(newproduct);

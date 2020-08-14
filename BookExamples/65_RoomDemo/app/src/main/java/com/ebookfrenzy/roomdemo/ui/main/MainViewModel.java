@@ -8,7 +8,11 @@ import com.ebookfrenzy.roomdemo.Product;
 import com.ebookfrenzy.roomdemo.ProductRepository;
 import java.util.List;
 
-
+/*
+THE VIEWMODEL IS RESPONSIBLE FOR CREATING AN INSTANCE OF THE REPOSITORY AND FOR PROVIDING METHODS AND
+LIVEDATA OBJECTS THAT CAN BE UTILIZED BY THE UI CONTROLLER TO KEEP THE USER INTERFACE SYNCHRONIZED WITH THE
+UNDERLYING DATABASE
+ */
 public class MainViewModel extends AndroidViewModel {
 
     private ProductRepository repository;

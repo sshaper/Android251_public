@@ -9,6 +9,7 @@ import java.util.List;
 
 @Dao
 public interface ProductDao {
+//NOTICE THIS IS AN INTERFACE
 
     @Insert
     void insertProduct(Product product);

@@ -102,6 +102,7 @@ public class MainActivity extends AppCompatActivity {
             Log.i(TAG,json);
             viewModel.setJson(json);
             Gson gson = new Gson();
+
             //THE MAIN OBJECT CLASS IS THE MAIN CLASS FOR PARSING THE JSON.  GSON PUTS ALL SUB OBJECTS AND ARRAYS IN SEPARATE CLASSES.  BELOW IS AN EXAMPLE OF THE DATA RETURNED.  THE CLASSES HAVE TO BE THE SAME NAMES AS THE JSON KEYS.  I CREATED COORD, MAIN, SYS, WEATHERARRAY (NOTE WEATHERARRAY IS AN ARRAY THE REFERENCES A CLASS IN ITS LIST...SEE MAINOBJ.JAVA
             MainObj mainObj = gson.fromJson(json, MainObj.class);
 

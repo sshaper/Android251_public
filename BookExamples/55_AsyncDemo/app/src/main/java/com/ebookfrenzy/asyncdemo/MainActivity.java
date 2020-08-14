@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
         //I CREATE THIS ARRAY OF STRINGS THAT CONTAINS TWO NAMES
         String [] names = {"scott","karen"};
 
+        //String names = "scott";
+
         //HERE I PASS IT TO THE DOINBACKGROUND METHOD
         AsyncTask task = new MyTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, names);
 
@@ -85,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
             //THIS WORKS FINE AND GOOD BECAUSE THIS IS IN THE MAIN ACTIVITY SO I CAN GRAB THE
             //TEXTVIEW AS WE CANNOT RETURN FROM HERE
             myTextView.setText(result);
+            //return result;
         }
     }
 
