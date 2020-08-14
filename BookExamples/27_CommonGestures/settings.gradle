@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name='CommonGestures'
+rootProject.name = "CommonGestures"

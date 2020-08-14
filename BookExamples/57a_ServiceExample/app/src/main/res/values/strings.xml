@@ -1,5 +1,0 @@
-<resources>
-    <string name="app_name">Intent Service Example</string>
-    <string name="button">Add Value</string>
-    <string name="message">This will start a service on a separate thread (in the background) which will run for 10 seconds, while it is running you will be able to use the button.</string>
-</resources>

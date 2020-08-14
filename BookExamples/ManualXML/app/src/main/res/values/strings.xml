@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ManualXML</string>
+    <string name="button_string">Button</string>
+    <string name="text_string">TextView</string>
+</resources>

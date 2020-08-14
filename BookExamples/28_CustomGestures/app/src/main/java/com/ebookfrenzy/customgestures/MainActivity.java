@@ -12,7 +12,8 @@ import android.widget.Toast;
 import android.gesture.Gesture;
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements OnGesturePerformedListener {
+public class MainActivity extends AppCompatActivity
+        implements OnGesturePerformedListener {
 
     private GestureLibrary gLibrary;
 
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements OnGesturePerforme
 
         GestureOverlayView gOverlay = findViewById(R.id.gOverlay);
         gOverlay.addOnGesturePerformedListener(this);
+
     }
 
     public void onGesturePerformed(GestureOverlayView overlay, Gesture

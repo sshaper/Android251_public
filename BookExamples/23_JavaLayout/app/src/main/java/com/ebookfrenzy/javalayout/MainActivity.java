@@ -7,10 +7,9 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import android.widget.Button;
 import android.widget.EditText;
 import android.graphics.Color;
+import androidx.constraintlayout.widget.ConstraintSet;
 import android.content.res.Resources;
 import android.util.TypedValue;
-
-import androidx.constraintlayout.widget.ConstraintSet;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         myEditText.setWidth(px);
 
         ConstraintLayout myLayout = new ConstraintLayout(this);
+
         myLayout.setBackgroundColor(Color.BLUE);
 
         myLayout.addView(myButton);
@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
                 ConstraintSet.PARENT_ID, ConstraintSet.TOP, 0);
         set.connect(myButton.getId(), ConstraintSet.BOTTOM,
                 ConstraintSet.PARENT_ID, ConstraintSet.BOTTOM, 0);
+
         set.constrainHeight(myEditText.getId(),
                 ConstraintSet.WRAP_CONTENT);
         set.constrainWidth(myEditText.getId(),
@@ -68,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
                 myButton.getId(), ConstraintSet.TOP, 70);
 
         set.applyTo(myLayout);
-
     }
 
     private int convertToPx(int value) {

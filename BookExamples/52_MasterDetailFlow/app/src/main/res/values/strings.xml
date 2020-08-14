@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MasterDetailFlow</string>
+    <string name="title_website_list">Websites</string>
+    <string name="title_website_detail">Website Detail</string>
+</resources>
