@@ -59,8 +59,7 @@ public class MainActivity extends AppCompatActivity {
         super.onSaveInstanceState(outState);
         Log.i(TAG, "onSaveInstanceState");
 
-        final EditText editText =
-                findViewById(R.id.editText);
+        final EditText editText = findViewById(R.id.editText);
         CharSequence userText = editText.getText();
         outState.putCharSequence("savedText", userText);
     }
@@ -69,13 +68,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         Log.i(TAG, "onRestoreInstanceState");
-
-        final EditText editText =
-                findViewById(R.id.editText);
-
-        CharSequence userText =
-                savedInstanceState.getCharSequence("savedText");
-
+        final EditText editText = findViewById(R.id.editText);
+        CharSequence userText = savedInstanceState.getCharSequence("savedText");
         editText.setText(userText);
     }
 

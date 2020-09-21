@@ -38,9 +38,10 @@ public class MainFragment extends Fragment {
         mViewModel = ViewModelProviders.of(this).get(MainViewModel.class);
 
         // TODO: Use the ViewModel
-        demoOwner = new DemoOwner();
-        demoOwner.startOwner();
-        demoOwner.stopOwner();
+        //demoOwner = new DemoOwner();
+        //demoOwner.startOwner();
+        //demoOwner.stopOwner();
+        getLifecycle().addObserver(new DemoObserver());
     }
 
 }

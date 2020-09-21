@@ -44,7 +44,7 @@ public class DemoObserver implements LifecycleObserver {
 
     @OnLifecycleEvent(Lifecycle.Event.ON_ANY)
     public void onAny(LifecycleOwner owner, Lifecycle.Event event) {
-        Log.i(LOG_TAG, owner.getLifecycle().getCurrentState().name());
+        Log.i(LOG_TAG, "On Any states - " + owner.getLifecycle().getCurrentState().name());
     }
 
 }
