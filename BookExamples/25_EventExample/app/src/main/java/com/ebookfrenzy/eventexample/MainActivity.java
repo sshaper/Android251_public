@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
                         TextView statusText =
                                 findViewById(R.id.statusText);
                         statusText.setText("Long button click");
-                        return false;
+                        return true;
                     }
                 }
         );

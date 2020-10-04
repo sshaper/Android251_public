@@ -1,6 +1,9 @@
 package com.ebookfrenzy.lifecycledemo.ui.main;
 
-import androidx.lifecycle.ViewModelProviders;
+//older class
+//import androidx.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProvider;
+
 
 import android.os.Bundle;
 
@@ -35,13 +38,17 @@ public class MainFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(MainViewModel.class);
+        //book had this
+        //mViewModel = ViewModelProviders.of(this).get(MainViewModel.class);
+
+        //replaced with this
+        mViewModel = new ViewModelProvider(this).get(MainViewModel.class);
 
         // TODO: Use the ViewModel
-        //demoOwner = new DemoOwner();
-        //demoOwner.startOwner();
-        //demoOwner.stopOwner();
-        getLifecycle().addObserver(new DemoObserver());
+        demoOwner = new DemoOwner();
+        demoOwner.startOwner();
+        demoOwner.stopOwner();
+        //getLifecycle().addObserver(new DemoObserver());
     }
 
 }

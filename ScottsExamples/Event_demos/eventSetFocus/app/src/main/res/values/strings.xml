@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">eventSetFocus</string>
+    <string name="name">Name</string>
+    <string name="address">Address</string>
+    <string name="textview">Please enter a name</string>
+    <string name="addressView">Address View</string>
+</resources>
