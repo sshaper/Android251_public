@@ -45,6 +45,7 @@ public class MainFragment extends Fragment {
         resultText = getView().findViewById(R.id.resultText);
         convertButton = getView().findViewById(R.id.convertButton);
 
+        //THIS IS CALLED SO WHEN THE FRAGMENT LOADS IT WILL PULL THE RESULT TEXT FROM THE MAIN VIEW MODEL
         resultText.setText(String.format(Locale.getDefault(), "%.2f",
                 mViewModel.getResult()));
 

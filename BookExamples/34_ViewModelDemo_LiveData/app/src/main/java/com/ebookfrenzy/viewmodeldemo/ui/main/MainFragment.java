@@ -46,6 +46,10 @@ public class MainFragment extends Fragment {
         resultText = getView().findViewById(R.id.resultText);
         convertButton = getView().findViewById(R.id.convertButton);
 
+        //resultText.setText(String.format(Locale.getDefault(), "%.2f",
+                //mViewModel.getResult()));
+
+
         final Observer<Float> resultObserver = new Observer<Float>() {
             @Override
             public void onChanged(@Nullable final Float result) {
@@ -62,6 +66,8 @@ public class MainFragment extends Fragment {
             public void onClick(View v) {
                 if (!dollarText.getText().toString().equals("")) {
                     mViewModel.setAmount(dollarText.getText().toString());
+                    //resultText.setText(String.format(Locale.getDefault(), "%.2f",
+                           //mViewModel.getResult()));
                 } else {
                     resultText.setText("No Value");
                 }

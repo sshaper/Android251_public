@@ -17,11 +17,9 @@ public class SharedViewModel extends ViewModel {
 
 
 
-
     private MutableLiveData<CharSequence> FragAEditText = new MutableLiveData<>();
     public void FragAEditSetText(CharSequence input){FragAEditText.setValue(input);}
     public LiveData<CharSequence> FragAEditGetText(){return FragAEditText;}
-
 
 
     private MutableLiveData<CharSequence> FragBEditText = new MutableLiveData<>();

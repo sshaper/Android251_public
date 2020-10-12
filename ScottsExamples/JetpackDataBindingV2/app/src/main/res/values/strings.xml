@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">jetpack DataBinding V2</string>
+    <string name="enter_text_here">Enter text here</string>
+</resources>

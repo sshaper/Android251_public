@@ -5,7 +5,7 @@ import androidx.fragment.app.FragmentActivity;
 
 import android.os.Bundle;
 
-public class MainActivity extends  FragmentActivity implements ToolbarFragment.ToolbarListener {
+public class MainActivity extends FragmentActivity implements ToolbarFragment.ToolbarListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,9 +14,8 @@ public class MainActivity extends  FragmentActivity implements ToolbarFragment.T
     }
 
     public void onButtonClick(int fontsize, String text) {
-        TextFragment textFragment =
-                (TextFragment)
-                        getSupportFragmentManager().findFragmentById(R.id.text_fragment);
+        TextFragment textFragment = (TextFragment)
+                getSupportFragmentManager().findFragmentById(R.id.text_fragment);
 
         textFragment.changeTextProperties(fontsize, text);
     }

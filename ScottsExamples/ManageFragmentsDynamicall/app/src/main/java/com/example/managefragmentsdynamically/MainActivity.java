@@ -10,6 +10,7 @@ import android.view.View;
 public class MainActivity extends AppCompatActivity {
 
     FragmentOne firstFragment = new FragmentOne();
+    FragmentTwo secondFragment = new FragmentTwo();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,12 +24,19 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
 
-        transaction.add(R.id.fragContainer, firstFragment);
+        transaction.replace(R.id.fragContainer, firstFragment);
+        transaction.addToBackStack(null);
         transaction.commit();
     }
 
     public void loadFragment2(View v){
+        secondFragment.setArguments(getIntent().getExtras());
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
 
+        transaction.replace(R.id.fragContainer, secondFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 
 }
