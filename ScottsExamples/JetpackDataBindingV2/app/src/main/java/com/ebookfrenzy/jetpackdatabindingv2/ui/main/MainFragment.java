@@ -2,7 +2,6 @@ package com.ebookfrenzy.jetpackdatabindingv2.ui.main;
 
 //import androidx.lifecycle.ViewModelProviders;
 //THE ABOVE IS DEPRECATED AND REPLACED BY THE ONE BELOW
-
 import androidx.lifecycle.ViewModelProvider;
 
 //LOADED WITH FRAGMENT PLUS VIEW MODEL
@@ -49,7 +48,6 @@ public class MainFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         mViewModel = new ViewModelProvider(this).get(MainViewModel.class);
         binding.setVariable(myViewModel, mViewModel);
-        // TODO: Use the ViewModel
-    }
+   }
 
 }
