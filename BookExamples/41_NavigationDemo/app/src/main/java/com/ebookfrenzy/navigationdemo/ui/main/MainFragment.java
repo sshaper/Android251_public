@@ -36,6 +36,7 @@ public class MainFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
         mViewModel = ViewModelProviders.of(this).get(MainViewModel.class);
 
         Button button = getView().findViewById(R.id.button);

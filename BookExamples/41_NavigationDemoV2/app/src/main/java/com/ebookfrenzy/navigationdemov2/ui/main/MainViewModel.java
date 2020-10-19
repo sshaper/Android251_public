@@ -1,4 +1,4 @@
-package com.ebookfrenzy.navigationdemov2.ui.main;
+package com.ebookfrenzy.navigationdemoV2.ui.main;
 
 import androidx.lifecycle.ViewModel;
 

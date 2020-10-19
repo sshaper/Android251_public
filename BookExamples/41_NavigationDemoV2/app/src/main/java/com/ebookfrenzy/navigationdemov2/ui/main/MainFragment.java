@@ -1,6 +1,6 @@
-package com.ebookfrenzy.navigationdemov2.ui.main;
+package com.ebookfrenzy.navigationdemoV2.ui.main;
 
-import androidx.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
 
@@ -12,15 +12,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.ebookfrenzy.navigationdemoV2.R;
 import android.widget.Button;
-import android.widget.EditText;
-
 import androidx.navigation.Navigation;
-
-import com.ebookfrenzy.navigationdemov2.R;
+import android.widget.EditText;
 
 public class MainFragment extends Fragment {
 
+    //MAINVIEW MODEL IS NOT BEING USED IN THIS PROJECT THIS WAS SET UP BY DEFAULT
     private MainViewModel mViewModel;
 
     public static MainFragment newInstance() {
@@ -37,22 +36,26 @@ public class MainFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(MainViewModel.class);
-        Button button = getView().findViewById(R.id.button);
+        mViewModel = new ViewModelProvider(this).get(MainViewModel.class);
 
+        //deprecated but still added by default.
+        //mViewModel = ViewModelProviders.of(this).get(MainViewModel.class);
+
+        Button button = getView().findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Navigation.findNavController(view).navigate(
-                        //R.id.mainToSecond);
                 EditText userText = getView().findViewById(R.id.userText);
-
-                //INORDER FOR THIS TO WORK I HAD TO CLICK BUILD/REBUILD PROJECT
                 MainFragmentDirections.MainToSecond action = MainFragmentDirections.mainToSecond();
+
+                //THE METHOD setMessage EXISTS BECAUSE WE HAVE AN ARGUMENT WITH THE NAME OF MESSAGE IN OUR NAVIGATION_GRAPH.XML FILE.  YOU MAY HAVE TO CLICK BUILD->MAKE PROJECT BECAUSE IT MAY NOT EXIST WHEN FIRST ADDED TO THE XML
                 action.setMessage(userText.getText().toString());
                 Navigation.findNavController(view).navigate(action);
+
+
             }
         });
+
     }
 
 }

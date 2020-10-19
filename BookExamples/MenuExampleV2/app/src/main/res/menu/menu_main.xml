@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.ebookfrenzy.menuexamplev2.MainActivity">
+    <group android:checkableBehavior="single">
+        <item android:title="@string/red_string"
+            android:id="@+id/menu_red" />
+        <item android:title="@string/green_string"
+            android:id="@+id/menu_green" />
+        <item android:title="@string/yellow_string"
+            android:id="@+id/menu_yellow" />
+        <item android:title="@string/blue_string"
+            android:id="@+id/menu_blue" />
+    </group>
+</menu>

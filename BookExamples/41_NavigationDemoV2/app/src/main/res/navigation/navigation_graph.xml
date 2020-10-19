@@ -7,21 +7,25 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.ebookfrenzy.navigationdemov2.ui.main.MainFragment"
+        android:name="com.ebookfrenzy.navigationdemoV2.ui.main.MainFragment"
         android:label="main_fragment"
         tools:layout="@layout/main_fragment" >
         <action
             android:id="@+id/mainToSecond"
             app:destination="@id/secondFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/secondFragment"
-        android:name="com.ebookfrenzy.navigationdemov2.SecondFragment"
+        android:name="com.ebookfrenzy.navigationdemoV2.SecondFragment"
         android:label="fragment_second"
         tools:layout="@layout/fragment_second" >
         <argument
             android:name="message"
             app:argType="string"
             android:defaultValue="No Message" />
+
+
     </fragment>
+
 </navigation>

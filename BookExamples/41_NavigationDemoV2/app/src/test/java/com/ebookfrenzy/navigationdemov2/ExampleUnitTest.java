@@ -1,4 +1,4 @@
-package com.ebookfrenzy.navigationdemov2;
+package com.ebookfrenzy.navigationdemoV2;
 
 import org.junit.Test;
 
