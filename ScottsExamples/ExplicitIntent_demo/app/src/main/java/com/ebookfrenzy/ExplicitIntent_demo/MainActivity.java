@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
-
+        super.onActivityResult(requestCode, resultCode, data);
         TextView textView1 = findViewById(R.id.textView1);
         if((requestCode == request_code_1) && (resultCode == RESULT_OK)){
             String returnString = data.getExtras().getString("returnDataFromB");

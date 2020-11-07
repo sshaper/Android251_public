@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        //BOOK DOES NOT REQUIRE THE SUPER BUT ANDROID STUDIO WANTS YOU TO ADD IT.
+        super.onActivityResult(requestCode, resultCode, data);
         if ((requestCode == request_code) &&
                 (resultCode == RESULT_OK)) {
 

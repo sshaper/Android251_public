@@ -13,12 +13,15 @@ public class MyTask extends  AsyncTask<String, String, String> {
 
         @Override
         protected String doInBackground(String... names) {
-            int i = 0;
+            int i, j;
+            i = 0;
             while (i <= 5) {
                 //HERE I ADD SOME NUMBERS TO THE NAMES ON EACH ITERATION JUST TO HAVE THE VALUES
                 //GET INCREMENTED
-                names[0] = names[0] + " - " + i;
-                names [1] = names[1] + " - " + (i + 1);
+
+                for(j = 0; j < names.length; j++){
+                    names[j] = names[j] + " - " + (i + j);
+                }
 
                 //ORIGINAL CODE FROM BOOK
                 //publishProgress(i);
@@ -44,9 +47,13 @@ public class MyTask extends  AsyncTask<String, String, String> {
             //ORIGINAL CODE FROM BOOK
             //myTextView.setText("Counter = " + values[0]);
 
-            //OUTPUTTING ARRAY OF STRING VALUES
-            //myTextView.setText(values[0] + "\n" + values[1]);
-            addText(values[0] + "\n" + values[1]);
+            int i;
+            String output = "";
+            for(i = 0; i < values.length; i++){
+                output += values[i] + "\n";
+            }
+            addText(output);
+
         }
 
         @Override

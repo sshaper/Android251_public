@@ -17,12 +17,6 @@ public class ActivityB extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         Button btn = findViewById(R.id.returnFromBBtn);
 
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
 
         if(extras == null){
             return;
@@ -31,6 +25,13 @@ public class ActivityB extends AppCompatActivity {
         String questionString = extras.getString("questionString");
         final TextView textView = findViewById(R.id.textView1);
         textView.setText(questionString);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
 
     }

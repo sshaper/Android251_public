@@ -9,8 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.snackbar.Snackbar;
 
-public class RecyclerAdapter
-    extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
+public class RecyclerAdapter   extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
 
     private String[] titles = {"Chapter One",
             "Chapter Two",
@@ -55,6 +54,7 @@ public class RecyclerAdapter
     public int getItemCount() {
         return titles.length;
     }
+
 
     static class ViewHolder extends RecyclerView.ViewHolder {
 

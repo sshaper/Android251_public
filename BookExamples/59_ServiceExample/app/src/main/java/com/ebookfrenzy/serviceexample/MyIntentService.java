@@ -6,8 +6,7 @@ import android.util.Log;
 
 public class MyIntentService extends IntentService {
 
-    private static final String TAG =
-            "ServiceExample";
+    private static final String TAG = "ServiceExample";
 
     @Override
     protected void onHandleIntent(Intent arg0) {

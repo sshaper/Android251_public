@@ -2,10 +2,16 @@ package com.ebookfrenzy.implicitintent;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.net.Uri;
 import android.content.Intent;
 import android.view.View;
+import android.widget.Toast;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,9 +22,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showWebPage(View view) {
-        Intent intent = new Intent(Intent.ACTION_VIEW,
-                Uri.parse("https://www.ebookfrenzy.com"));
 
-        startActivity(intent);
+
+        if(isIntentAvailable(this,"android.intent.action.SEND")){
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.ebookfrenzy.com"));
+
+            startActivity(intent);
+
+       }
+        else {
+            Toast toast=Toast.makeText(getApplicationContext(),"Supporting Intent not found", Toast.LENGTH_SHORT);
+             toast.show();
+        }
+    }
+
+    public static boolean isIntentAvailable(Context context, String action) {
+        final PackageManager packageManager = context.getPackageManager();
+        final Intent intent = new Intent(action);
+        List<ResolveInfo> list = packageManager.queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
+        return list.size() > 0;
     }
 }

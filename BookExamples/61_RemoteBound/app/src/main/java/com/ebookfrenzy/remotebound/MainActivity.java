@@ -12,11 +12,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     Messenger myService = null;
     boolean isBound;
+    int i = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
                 RemoteService.class);
 
         bindService(intent, myConnection, Context.BIND_AUTO_CREATE);
+
+        int i = 0;
+
     }
 
     private ServiceConnection myConnection =
@@ -44,6 +49,14 @@ public class MainActivity extends AppCompatActivity {
                     isBound = false;
                 }
             };
+
+
+    public void countClicks(View view){
+        i++;
+        TextView textView = findViewById(R.id.textView);
+        textView.setText("The button was clicked " + i + " times.");
+    }
+
 
     public void sendMessage(View view)
     {

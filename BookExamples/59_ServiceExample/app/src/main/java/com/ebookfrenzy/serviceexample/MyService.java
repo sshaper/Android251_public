@@ -11,8 +11,7 @@ public class MyService extends Service {
     public MyService() {
     }
 
-    private static final String TAG =
-            "ServiceExample";
+    private static final String TAG = "ServiceExample";
 
     @Override
     public void onCreate() {
@@ -22,8 +21,20 @@ public class MyService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
 
-        AsyncTask task = new SrvTask().executeOnExecutor(
-                AsyncTask.THREAD_POOL_EXECUTOR, startId);
+        AsyncTask task = new SrvTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, startId);
+
+        //IF YOU COMMENT OUT THE ASYNCTASK AND UNCOMMENT THIS CODE THE SERVICE WILL BE ON THE MAIN THREAD.
+        /*
+        Log.i(TAG, "Service onStartCommand " + startId);
+        int i = 0;
+        while (i <= 3) {
+            try {
+                Thread.sleep(10000);
+                i++;
+            } catch (Exception e) {
+            }
+            Log.i(TAG, "Service running");
+        }*/
 
         return Service.START_STICKY;
     }
@@ -37,9 +48,10 @@ public class MyService extends Service {
             int i = 0;
             while (i <= 3) {
 
+                params[0] = params[0];
                 publishProgress(params[0]);
                 try {
-                    Thread.sleep(10000);
+                    Thread.sleep(1000);
                     i++;
                 } catch (Exception e) {
                 }

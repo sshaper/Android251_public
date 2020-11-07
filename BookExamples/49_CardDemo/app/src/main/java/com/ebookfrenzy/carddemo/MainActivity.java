@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
         recyclerView = findViewById(R.id.recyclerView);
 
         layoutManager = new LinearLayoutManager(this);
@@ -31,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
     }
 
+
+    //THIS IS JUST THE OPTIONS FOR THE MENU NOTHING TO DO WITH THE RECYCLE VIEW
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
