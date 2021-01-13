@@ -29,6 +29,7 @@ public class MyTask extends  AsyncTask<String, String, String> {
                 //SENDING THE NAMES ARRAY TO THE ONPROGRESSUPDATE METHOD
                 publishProgress(names);
 
+
                 try {
                     Thread.sleep(1000);
                     i++;
@@ -54,15 +55,13 @@ public class MyTask extends  AsyncTask<String, String, String> {
             }
             addText(output);
 
+
         }
 
         @Override
         protected void onPostExecute(String result) {
-            //THIS WORKS FINE AND GOOD BECAUSE THIS IS IN THE MAIN ACTIVITY SO I CAN GRAB THE
-            //TEXTVIEW AS WE CANNOT RETURN FROM HERE
-
-            //IMPORTANT NOTE!!! YOU WERE TO USE A RECYCLE VIEW YOU COULD ADD VALUES TO THE ARRAY IN THE DO IN BACKGROUND AND THEN CALL ADAPTER.NOTIFYDATASETCHANGE HERE.
-            //myTextView.setText(result);
+            
+            //IMPORTANT NOTE!!! IF YOU WERE TO USE A RECYCLE VIEW YOU COULD ADD VALUES TO THE ARRAY IN THE DO IN BACKGROUND AND THEN CALL ADAPTER.NOTIFYDATASETCHANGE HERE.
             addText(result);
         }
     }

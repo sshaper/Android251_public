@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     public void buttonClick(View view)
     {
         //I CREATE THIS ARRAY OF STRINGS THAT CONTAINS TWO NAMES
-        String [] names = {"scott","jazzy","scottie","jazzy","black and white"};
+        String [] names = {"scott","karen","scottie"};
 
         //HERE I PASS IT TO THE DOINBACKGROUND METHOD
         AsyncTask task = new MyTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, names);

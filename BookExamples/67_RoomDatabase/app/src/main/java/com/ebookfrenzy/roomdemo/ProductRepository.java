@@ -8,8 +8,7 @@ import androidx.lifecycle.LiveData;
 
 public class ProductRepository {
 
-    private MutableLiveData<List<Product>> searchResults =
-            new MutableLiveData<>();
+    private MutableLiveData<List<Product>> searchResults = new MutableLiveData<>();
     private LiveData<List<Product>> allProducts;
     private ProductDao productDao;
 

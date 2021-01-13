@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import com.android.volley.Request;
@@ -24,15 +25,16 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
     RecyclerView.Adapter adapter;
+    Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        recyclerView = findViewById(R.id.coupons_rv);
-        layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
+        //recyclerView = findViewById(R.id.coupons_rv);
+        //layoutManager = new LinearLayoutManager(this);
+        //recyclerView.setLayoutManager(layoutManager);
 
         //CREATE AN INSTANCE OF GSON
         final Gson gson = new Gson();
@@ -43,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         //GET THE URL STRING TO THE JASON FILE
         String url = "http://198.199.80.235/cps276/cps276_examples/datasources/coupons_json_251.json";
 
-        //String url = "http://198.199.80.235/cps276/cps276_examples/datasources/names_json_251v2.json";
+
 
         // CREATES AN INSTANCE OF A JsonObjectRequest AND PASS IN SOME PARAMETERS
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
@@ -68,6 +70,9 @@ public class MainActivity extends AppCompatActivity {
                         //GETS THE COUPON LIST FROM THE COUPONS CLASS AND PUTS IT INTO cpnlst AND ADDS IT AS A PARAMETER TO THE RecyclerViewAdaptor() CONSTRUCTOR
                         ArrayList<Coupons> cpnlst = coupons.getCouponList();
                         RecyclerViewAdapter adapter = new RecyclerViewAdapter(cpnlst);
+                        recyclerView = findViewById(R.id.coupons_rv);
+                        layoutManager = new LinearLayoutManager(context);
+                        recyclerView.setLayoutManager(layoutManager);
                         recyclerView.setAdapter(adapter);
                     }
                 },

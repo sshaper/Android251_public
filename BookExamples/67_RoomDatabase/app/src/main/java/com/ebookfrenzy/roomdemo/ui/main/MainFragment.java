@@ -54,7 +54,9 @@ public class MainFragment extends Fragment {
         productQuantity = getView().findViewById(R.id.productQuantity);
 
         listenerSetup();
+
         observerSetup();
+
         recyclerSetup();
 
     }

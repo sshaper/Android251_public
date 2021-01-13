@@ -11,7 +11,7 @@ import java.util.Locale;
 public class MainObj {
     String name;
     Coord coord;
-    //VERY IMPORTANT HERE.  THE WEATHER CONTAINS AN ARRAY INSTEAD OF AN OBJECT LIKE THE OTHER.  SO I HAD TO PUT IT INTO A LIST AS SHOWN.
+    //VERY IMPORTANT HERE.  THE WEATHER CONTAINS AN LIST INSTEAD OF AN OBJECT LIKE THE OTHER.  SO I HAD TO PUT IT INTO A LIST AS SHOWN.
     List<WeatherArray> weather = null;
     Main main;
     Long dt;
@@ -27,6 +27,8 @@ public class MainObj {
     public void setWeather(List<WeatherArray> weather){
         this.weather = weather;
     }
+
+
     public String displayTemp(){
         String t = String.format(Locale.ENGLISH,"%.0f", main.getTemp());
         return t;

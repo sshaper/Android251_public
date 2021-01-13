@@ -25,14 +25,14 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent();
         intent.setAction("com.ebookfrenzy.sendbroadcast");
         intent.addFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES);
+        intent.putExtra("MyData", " scott");
         sendBroadcast(intent);
     }
 
     private void configureReceiver() {
         IntentFilter filter = new IntentFilter();
         filter.addAction("com.ebookfrenzy.sendbroadcast");
-        filter.addAction(
-                "android.intent.action.ACTION_POWER_DISCONNECTED");
+        filter.addAction("android.intent.action.ACTION_POWER_DISCONNECTED");
         receiver = new MyReceiver();
         registerReceiver(receiver, filter);
     }

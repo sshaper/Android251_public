@@ -13,7 +13,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     private ArrayList<Coupons> couponsList;
 
-
     //CREATE CONSTRUCTOR AND ADD LIST
     public RecyclerViewAdapter(ArrayList<Coupons> cLst) {
         couponsList = cLst;

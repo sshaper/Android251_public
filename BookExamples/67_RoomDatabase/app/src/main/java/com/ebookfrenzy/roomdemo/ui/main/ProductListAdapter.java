@@ -26,6 +26,10 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
         notifyDataSetChanged();
     }
 
+
+
+
+
     @Override
     public int getItemCount() {
         return productList == null ? 0 : productList.size();

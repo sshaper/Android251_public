@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         tempRange = findViewById(R.id.tempRange);
         description = findViewById(R.id.description);
 
-        //I CHECK IF THE MAINVIEWMODEL (CALLED VIEWMODEL) HAS THE JSON STRING STORED, IF SO I CALL PARSEDISPLAY DATA TO DISPLAY IT OTHERWISE WE MOVE ON.  THIS IS HOW I HANDLED THE DEVICE ROTATION.
+        //I CHECK IF THE MAINVIEWMODEL (CALLED VIEWMODEL) HAS THE JSON STRING STORED, IF SO I CALL PARSEDISPLAY DATA TO DISPLAY IT OTHERWISE WE MOVE ON AND GET IT.  THIS IS HOW I HANDLED THE DEVICE ROTATION.
         if(viewModel.getJson() != null){
             parseDisplayData(viewModel.getJson());
         }
@@ -54,18 +54,20 @@ public class MainActivity extends AppCompatActivity {
         String zip = editTextZip.getText().toString();
         String url;
 
+        //NOT THE BEST ZIP CODE REGEX
         if (zip.matches("[0-9]{5}")){
+            //for test http://api.openweathermap.org/data/2.5/weather?zip=48843&units=imperial&APPID=80d537a4b4cd7a3b10a3c65a70316965
             url = "http://api.openweathermap.org/data/2.5/weather?zip=" + zip + "&units=imperial&APPID=80d537a4b4cd7a3b10a3c65a70316965";
              getWeatherData(url);
         }
         else {
-            Log.i(TAG,"Wrong Address");
+            Log.i(TAG,"Wrong Zip Code");
         }
     }
 
     //THIS IS WHERE I GET THE WEATHER DATA (JSON)
     private void getWeatherData(String url){
-        //HERE I DO THE VOLLEY REQUEST, NOTE THIS IS ALL DONE ON THE MAIN THREAD BUT I HAVE NO OTHER PROCESSES DO IT IS FINE.  PLUS VERY SMALL AMOUNT OF DATA
+        //HERE I DO THE VOLLEY REQUEST, NOTE THIS IS ALL DONE ON THE MAIN THREAD BUT I HAVE NO OTHER PROCESSES SO IT IS FINE.  PLUS VERY SMALL AMOUNT OF DATA
         RequestQueue queue = Volley.newRequestQueue(this);
 
         //HERE WE SEND A GET REQUEST TO THE SERVER AND GET A JSON OBJECT RESPONSE
