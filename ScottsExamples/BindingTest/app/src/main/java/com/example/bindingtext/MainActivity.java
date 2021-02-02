@@ -8,6 +8,8 @@ import com.example.bindingtext.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,10 +18,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(view);
 
         binding.name.setText("Scott");
+
         binding.button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                binding.name.getText().toString();
                 binding.name.setText(binding.name.getText() + " Shaper");
             }
         });

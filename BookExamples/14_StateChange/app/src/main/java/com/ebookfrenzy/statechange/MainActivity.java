@@ -59,18 +59,27 @@ public class MainActivity extends AppCompatActivity {
         super.onSaveInstanceState(outState);
         Log.i(TAG, "onSaveInstanceState");
 
-        final EditText editText = findViewById(R.id.editText);
-        CharSequence userText = editText.getText();
-        outState.putCharSequence("savedText", userText);
+        final EditText text1 = findViewById(R.id.text1);
+        final EditText text2 = findViewById(R.id.text2);
+        CharSequence txt1 = text1.getText();
+        CharSequence txt2 = "sam";
+        outState.putCharSequence("txt1", txt1);
+        outState.putCharSequence("txt2", txt2);
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         Log.i(TAG, "onRestoreInstanceState");
-        final EditText editText = findViewById(R.id.editText);
-        CharSequence userText = savedInstanceState.getCharSequence("savedText");
-        editText.setText(userText);
+
+        final EditText text1 = findViewById(R.id.text1);
+        final EditText text2 = findViewById(R.id.text2);
+        CharSequence txt1 = savedInstanceState.getCharSequence("txt1");
+        text1.setText(txt1);
+        CharSequence txt2 = savedInstanceState.getCharSequence("txt2");
+        text2.setText(txt2);
+
+
     }
 
 }
