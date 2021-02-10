@@ -11,11 +11,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:textSize="30sp"
-        android:layout_marginTop="40dp"
-        android:layout_marginStart="30dp"
         android:layout_alignParentTop="true"
-        android:text="TextView1" />
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/txt1"
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/textView2"
@@ -26,7 +26,7 @@
         android:layout_marginTop="40dp"
         android:layout_marginStart="40dp"
         android:textSize="30sp"
-        android:text="TextView2" />
+        android:text="@string/txt2" />
 
     <Button
         android:id="@+id/button1"
@@ -36,7 +36,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginStart="40dp"
         android:layout_marginTop="30dp"
-        android:text="Button1" />
+        android:text="@string/btn1" />
 
     <Button
         android:id="@+id/button2"
@@ -46,7 +46,7 @@
         android:layout_marginStart="140dp"
         android:layout_alignParentStart="true"
         android:layout_marginTop="30dp"
-        android:text="Button2" />
+        android:text="@string/btn2" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -56,5 +56,6 @@
         android:layout_alignParentStart="true"
         android:layout_marginStart="288dp"
         android:layout_marginTop="29dp"
+        android:contentDescription="@string/img1"
         app:srcCompat="@mipmap/ic_launcher" />
 </RelativeLayout>

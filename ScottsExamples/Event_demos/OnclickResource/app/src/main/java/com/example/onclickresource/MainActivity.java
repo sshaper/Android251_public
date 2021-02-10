@@ -19,6 +19,5 @@ public class MainActivity extends AppCompatActivity {
     public void clickMe(View v){
         TextView txt = findViewById(R.id.textView);
         txt.setText("Button Clicked!");
-
     }
 }

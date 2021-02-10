@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         binding.button.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v){
+
                 binding.textView.setText("It Works!");
             }
         }

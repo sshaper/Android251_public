@@ -6,24 +6,15 @@
               android:layout_width="match_parent"
               android:layout_height="wrap_content">
   <ImageView
+      android:id="@+id/imageView1"
       android:layout_width="50dp"
       android:layout_height="50dp"
       tools:src="@tools:sample/avatars"/>
-  <LinearLayout
+  <TextView
+      android:id="@+id/textView1"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_gravity="center"
       android:padding="5dp"
-      android:orientation="vertical">
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="@tools:sample/lorem[3]" />
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="@tools:sample/lorem[4]" />
-  </LinearLayout>
+      tools:text="@tools:sample/lorem" />
 </LinearLayout>
