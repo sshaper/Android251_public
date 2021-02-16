@@ -11,15 +11,17 @@ public class MainViewModel extends ViewModel {
     //private Float result = 0F;
     private MutableLiveData<Float> result = new MutableLiveData<>();
 
+
     public void setAmount(String value) {
         this.dollarText = value;
         //result = Float.parseFloat(dollarText)*usd_to_eu_rate;
         result.setValue(Float.parseFloat(dollarText)*usd_to_eu_rate);
+
     }
 
     //public Float getResult()
-    public MutableLiveData<Float> getResult()
-    {
+    public MutableLiveData<Float> getResult(){
         return result;
     }
+
 }

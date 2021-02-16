@@ -80,8 +80,6 @@ public class MainFragment extends Fragment {
                 }
             }
         });*/
-
-
         binding.setVariable(myViewModel, mViewModel);
     }
 

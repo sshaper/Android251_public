@@ -58,6 +58,7 @@ public class MainFragment extends Fragment {
             }
         };
 
+
         mViewModel.getResult().observe(getViewLifecycleOwner(), resultObserver);
 
         convertButton.setOnClickListener(new View.OnClickListener()

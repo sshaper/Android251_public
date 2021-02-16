@@ -57,9 +57,12 @@ public class ToolbarFragment extends Fragment  implements OnSeekBarChangeListene
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 buttonClicked(v);
+                //could have also done this.
+                //activityCallback.onButtonClick(seekvalue, edittext.getText().toString());
             }
         });
 
+        //TAKE NOTE ON THE RETURN VIEW
         return view;
     }
 
@@ -69,8 +72,7 @@ public class ToolbarFragment extends Fragment  implements OnSeekBarChangeListene
     }
 
     @Override
-    public void onProgressChanged(SeekBar seekBar, int progress,
-                                  boolean fromUser) {
+    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
         seekvalue = progress;
     }
 

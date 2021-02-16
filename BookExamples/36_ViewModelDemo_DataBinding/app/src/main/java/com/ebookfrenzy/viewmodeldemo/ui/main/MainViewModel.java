@@ -24,10 +24,8 @@ public class MainViewModel extends ViewModel {
     */
 
     public void convertValue() {
-        if ((dollarValue.getValue() != null) &&
-                (!dollarValue.getValue().equals(""))) {
-            result.setValue(Float.parseFloat(dollarValue.getValue())
-                    * usd_to_eu_rate);
+        if ((dollarValue.getValue() != null) && (!dollarValue.getValue().equals(""))) {
+            result.setValue(Float.parseFloat(dollarValue.getValue()) * usd_to_eu_rate);
         } else {
             result.setValue(0F);
         }
