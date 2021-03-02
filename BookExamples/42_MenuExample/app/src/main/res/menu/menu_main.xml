@@ -5,15 +5,15 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/menu_red"
-            android:title="Red" />
+            android:title="@string/red" />
         <item
             android:id="@+id/menu_green"
-            android:title="Green" />
+            android:title="@string/green" />
         <item
             android:id="@+id/menu_yellow"
-            android:title="Yellow" />
+            android:title="@string/yellow" />
         <item
             android:id="@+id/menu_blue"
-            android:title="Blue" />
+            android:title="@string/blue" />
     </group>
 </menu>
