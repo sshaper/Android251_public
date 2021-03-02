@@ -24,6 +24,10 @@
             android:name="message"
             app:argType="string"
             android:defaultValue="No Message" />
+        <argument
+            android:name="number"
+            app:argType="integer"
+            android:defaultValue="0" />
 
 
     </fragment>

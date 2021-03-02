@@ -7,7 +7,7 @@ import androidx.lifecycle.SavedStateHandle;
 
 public class MainViewModel extends ViewModel {
 
-    private static final String RESULT_KEY = "Euro Value";
+    private static final String RESULT_KEY = "EuroValue";
     private static final Float usd_to_eu_rate = 0.74F;
     private String dollarText = "";
     private SavedStateHandle savedStateHandle;
@@ -22,6 +22,7 @@ public class MainViewModel extends ViewModel {
         this.dollarText = value;
         Float convertedValue = Float.parseFloat(dollarText)*usd_to_eu_rate;
         result.setValue(convertedValue);
+
         savedStateHandle.set(RESULT_KEY, convertedValue);
 
         //result.setValue(Float.parseFloat(dollarText)*usd_to_eu_rate);

@@ -46,15 +46,16 @@ public class MainFragment extends Fragment {
         convertButton = getView().findViewById(R.id.convertButton);
 
         //THIS IS CALLED SO WHEN THE FRAGMENT LOADS IT WILL PULL THE RESULT TEXT FROM THE MAIN VIEW MODEL
-        resultText.setText(String.format(Locale.getDefault(), "%.2f",
-                mViewModel.getResult()));
+        resultText.setText(String.format(Locale.getDefault(), "%.2f", mViewModel.getResult()));
 
         convertButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v) {
                 if (!dollarText.getText().toString().equals("")) {
+
                     mViewModel.setAmount(dollarText.getText().toString());
+
                     resultText.setText(String.format(Locale.getDefault(), "%.2f",
                             mViewModel.getResult()));
                 } else {

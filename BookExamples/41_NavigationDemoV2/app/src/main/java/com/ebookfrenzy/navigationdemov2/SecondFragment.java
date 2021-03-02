@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.net.Uri;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class SecondFragment extends Fragment {
@@ -21,9 +22,16 @@ public class SecondFragment extends Fragment {
         super.onStart();
 
         TextView argText = getView().findViewById(R.id.argText);
+        TextView number = getView().findViewById(R.id.argNumber);
         SecondFragmentArgs args = SecondFragmentArgs.fromBundle(getArguments());
         String message = args.getMessage();
         argText.setText(message);
+
+        //THIS IS THE NUMBER I ADDED
+        int num = args.getNumber();
+
+        //I HAD TO CONVERT TO A STRING TO PUT IT INTO A TEXTVIEW
+        number.setText(String.valueOf(num));
     }
 
     public interface OnFragmentInteractionListener {

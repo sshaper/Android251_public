@@ -46,8 +46,7 @@ public class MainFragment extends Fragment {
             public void onClick(View view) {
                 EditText userText = getView().findViewById(R.id.userText);
 
-                MainFragmentDirections.MainToSecond action =
-                        MainFragmentDirections.mainToSecond();
+                MainFragmentDirections.MainToSecond action = MainFragmentDirections.mainToSecond();
 
                 action.setMessage(userText.getText().toString());
                 Navigation.findNavController(view).navigate(action);

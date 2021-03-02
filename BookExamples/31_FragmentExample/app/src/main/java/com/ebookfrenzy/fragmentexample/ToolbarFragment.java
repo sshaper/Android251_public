@@ -67,8 +67,7 @@ public class ToolbarFragment extends Fragment  implements OnSeekBarChangeListene
     }
 
     public void buttonClicked (View view) {
-        activityCallback.onButtonClick(seekvalue,
-                edittext.getText().toString());
+        activityCallback.onButtonClick(seekvalue, edittext.getText().toString());
     }
 
     @Override
