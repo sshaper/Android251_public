@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TabLayoutDemoV2</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Tab1 Fragment</string>
+    <string name="second_fragment_label">Tab2 Fragment</string>
+
+    <string name="hello_first_fragment">Tab1 Fragment</string>
+    <string name="hello_second_fragment">Tab2 Fragment</string>
+</resources>

@@ -47,7 +47,10 @@ public class MainFragment extends Fragment {
             public void onClick(View view) {
                 EditText userText = getView().findViewById(R.id.userText);
                 Integer number = 10;
-                MainFragmentDirections.MainToSecond action = MainFragmentDirections.mainToSecond();
+
+
+                //MainFragmentDirections.MainToSecond action = MainFragmentDirections.mainToSecond();
+                MainFragmentDirections.ActionMainFragmentToSecondFragment action = MainFragmentDirections.actionMainFragmentToSecondFragment();
 
                 //THE METHOD setMessage EXISTS BECAUSE WE HAVE AN ARGUMENT WITH THE NAME OF MESSAGE IN OUR NAVIGATION_GRAPH.XML FILE.  YOU MAY HAVE TO CLICK BUILD->MAKE PROJECT BECAUSE IT MAY NOT EXIST WHEN FIRST ADDED TO THE XML
                 action.setMessage(userText.getText().toString());

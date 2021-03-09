@@ -3,8 +3,6 @@ package com.ebookfrenzy.lifecycledemo.ui.main;
 //older class
 //import androidx.lifecycle.ViewModelProviders;
 import androidx.lifecycle.ViewModelProvider;
-
-
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -44,11 +42,10 @@ public class MainFragment extends Fragment {
         //replaced with this
         mViewModel = new ViewModelProvider(this).get(MainViewModel.class);
 
-        // TODO: Use the ViewModel
-        //demoOwner = new DemoOwner();
-        //demoOwner.startOwner();
-        //demoOwner.stopOwner();
-        getLifecycle().addObserver(new DemoObserver());
+        demoOwner = new DemoOwner();
+        demoOwner.startOwner();
+        demoOwner.stopOwner();
+        //getLifecycle().addObserver(new DemoObserver());
     }
 
 }

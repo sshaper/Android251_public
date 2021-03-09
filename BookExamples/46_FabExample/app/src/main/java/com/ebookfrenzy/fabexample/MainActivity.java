@@ -42,17 +42,22 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Undo", undoOnClickListener).show();
             }
         });
+
+
+
     }
 
     @Override
     protected void onStart() {
         super.onStart();
+
         myListView = findViewById(R.id.listView);
 
         adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1,
                 listItems);
         myListView.setAdapter(adapter);
+
     }
 
     private void addListItem() {
@@ -63,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         listItems.add(dateformat.format(new Date()));
         adapter.notifyDataSetChanged();
     }
-
+    //THIS METHOD DOES THE UNDOING OF THE LAST ENTERED DATE.
     View.OnClickListener undoOnClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {

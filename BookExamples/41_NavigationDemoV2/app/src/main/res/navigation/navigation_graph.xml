@@ -11,9 +11,8 @@
         android:label="main_fragment"
         tools:layout="@layout/main_fragment" >
         <action
-            android:id="@+id/mainToSecond"
+            android:id="@+id/action_mainFragment_to_secondFragment"
             app:destination="@id/secondFragment" />
-
     </fragment>
     <fragment
         android:id="@+id/secondFragment"
@@ -28,6 +27,10 @@
             android:name="number"
             app:argType="integer"
             android:defaultValue="0" />
+
+
+
+
 
 
     </fragment>
