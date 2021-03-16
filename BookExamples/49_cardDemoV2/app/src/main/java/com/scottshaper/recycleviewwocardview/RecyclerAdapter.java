@@ -36,6 +36,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             R.drawable.android_image_7,
             R.drawable.android_image_8 };
 
+
     class ViewHolder extends RecyclerView.ViewHolder {
         ImageView itemImage;
         TextView itemTitle;

@@ -10,8 +10,8 @@ public class MyReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        String message = "Broadcast intent detected "
-                + intent.getAction() + intent.getExtras().getString("MyData");
+        //SLIGHT MODIFICATION FROM THE BOOK
+        String message = "Broadcast intent detected " + intent.getAction() + intent.getExtras().getString("MyData");
 
         Toast.makeText(context, message,
                 Toast.LENGTH_LONG).show();

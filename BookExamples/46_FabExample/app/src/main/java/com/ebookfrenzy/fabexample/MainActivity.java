@@ -42,9 +42,6 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Undo", undoOnClickListener).show();
             }
         });
-
-
-
     }
 
     @Override

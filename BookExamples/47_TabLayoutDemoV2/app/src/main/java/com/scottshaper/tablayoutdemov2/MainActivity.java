@@ -21,7 +21,7 @@ import androidx.viewpager.widget.PagerAdapter;
 
 import java.util.Set;
 
-public class MainActivity extends AppCompatActivity implements FirstFragment.OnFragmentInteractionListener, SecondFragment.OnFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements FirstFragment.OnFragmentInteractionListener, SecondFragment.OnFragmentInteractionListener, ThirdFragment.OnFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements FirstFragment.OnF
         TabLayout tabLayout = findViewById(R.id.tab_layout);
         tabLayout.addTab(tabLayout.newTab().setText("Tab 1 Item"));
         tabLayout.addTab(tabLayout.newTab().setText("Tab 2 Item"));
+        tabLayout.addTab(tabLayout.newTab().setText("Tab 3 Item"));
 
         final ViewPager viewPager = findViewById(R.id.pager);
         final PagerAdapter adapter = new TabPagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
