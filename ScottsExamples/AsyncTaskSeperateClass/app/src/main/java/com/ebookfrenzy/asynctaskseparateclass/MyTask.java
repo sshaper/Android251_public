@@ -2,9 +2,8 @@ package com.ebookfrenzy.asynctaskseparateclass;
 
 import android.os.AsyncTask;
 
-import static com.ebookfrenzy.asynctaskseparateclass.MainActivity.addText;
-
 public class MyTask extends  AsyncTask<String, String, String> {
+
 
         @Override
         protected void onPreExecute() {
@@ -31,7 +30,7 @@ public class MyTask extends  AsyncTask<String, String, String> {
 
 
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(4000);
                     i++;
                 }
                 catch (Exception e) {
@@ -53,7 +52,7 @@ public class MyTask extends  AsyncTask<String, String, String> {
             for(i = 0; i < values.length; i++){
                 output += values[i] + "\n";
             }
-            addText(output);
+            MainActivity.addText(output);
 
 
         }
@@ -62,7 +61,7 @@ public class MyTask extends  AsyncTask<String, String, String> {
         protected void onPostExecute(String result) {
             
             //IMPORTANT NOTE!!! IF YOU WERE TO USE A RECYCLE VIEW YOU COULD ADD VALUES TO THE ARRAY IN THE DO IN BACKGROUND AND THEN CALL ADAPTER.NOTIFYDATASETCHANGE HERE.
-            addText(result);
+            MainActivity.addText(result);
         }
     }
 

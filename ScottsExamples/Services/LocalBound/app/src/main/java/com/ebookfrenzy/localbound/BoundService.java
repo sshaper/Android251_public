@@ -11,6 +11,7 @@ import android.os.Binder;
 
 public class BoundService extends Service {
 
+    //CREATE THE BINDER OBJECT
     private final IBinder myBinder = new MyLocalBinder();
 
     public BoundService() {
@@ -20,6 +21,7 @@ public class BoundService extends Service {
     public IBinder onBind(Intent intent) {
         return myBinder;
     }
+
 
     public String getCurrentTime() {
         SimpleDateFormat dateformat = new SimpleDateFormat("HH:mm:ss MM/dd/yyyy", Locale.US);
@@ -31,7 +33,7 @@ public class BoundService extends Service {
         catch (Exception e) {
             return(e.getLocalizedMessage());
         }
-        return (dateformat.format(new Date()));
+        return ("The current date and time is "+dateformat.format(new Date()));
     }
 
     public class MyLocalBinder extends Binder {

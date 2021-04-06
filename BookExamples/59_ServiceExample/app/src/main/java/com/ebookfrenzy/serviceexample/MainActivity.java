@@ -12,6 +12,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        /*THIS WOULD START THE SIMPLE INTENT SERVICE
+        * Intent intent = new Intent(this, MyIntentService.class);
+          startService(intent);
+        * */
+
     }
 
     public void buttonClick(View view)

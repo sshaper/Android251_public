@@ -15,11 +15,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Intent intent = new Intent(this, MyIntentService.class);
-        startService(intent);
+       
+        Button btn1 = findViewById(R.id.btn1);
+        Button btn2 = findViewById(R.id.btn2);
 
-        Button button = findViewById(R.id.button);
+        btn1.setOnClickListener(new Button.OnClickListener(){
+            public void onClick(View v){
+                startService(intent);
+            }
+        });
 
-        button.setOnClickListener(
+
+        btn2.setOnClickListener(
                 new Button.OnClickListener() {
                     int i;
                     String msg;

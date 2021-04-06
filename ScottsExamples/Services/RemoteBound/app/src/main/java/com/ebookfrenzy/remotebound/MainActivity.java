@@ -25,8 +25,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Intent intent = new Intent(getApplicationContext(),
-                RemoteService.class);
+        Intent intent = new Intent(getApplicationContext(), RemoteService.class);
 
         bindService(intent, myConnection, Context.BIND_AUTO_CREATE);
 
@@ -34,17 +33,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private ServiceConnection myConnection =
-            new ServiceConnection() {
-                public void onServiceConnected(
-                        ComponentName className,
-                        IBinder service) {
+    private ServiceConnection myConnection = new ServiceConnection() {
+                public void onServiceConnected(ComponentName className, IBinder service) {
                     myService = new Messenger(service);
                     isBound = true;
                 }
 
-                public void onServiceDisconnected(
-                        ComponentName className) {
+                public void onServiceDisconnected(ComponentName className) {
                     myService = null;
                     isBound = false;
                 }

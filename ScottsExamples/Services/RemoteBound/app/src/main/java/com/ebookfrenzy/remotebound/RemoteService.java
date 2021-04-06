@@ -22,16 +22,14 @@ public class RemoteService extends Service {
             String dataString = data.getString("MyString");
             try {
                 Thread.sleep(5000);
-                Toast.makeText(getApplicationContext(),
-                        dataString, Toast.LENGTH_SHORT).show();
+
             }
             catch (Exception e) {
                 //return(e.getLocalizedMessage());
             }
 
 
-            Toast.makeText(getApplicationContext(),
-                    dataString, Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), dataString, Toast.LENGTH_SHORT).show();
         }
     }
 

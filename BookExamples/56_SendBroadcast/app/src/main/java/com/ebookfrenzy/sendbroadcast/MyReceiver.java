@@ -11,9 +11,17 @@ public class MyReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         //SLIGHT MODIFICATION FROM THE BOOK
-        String message = "Broadcast intent detected " + intent.getAction() + intent.getExtras().getString("MyData");
+        //I PASS TWO DIFFERENT INTENTS AND DEPENDING ON WHAT GETS PASSED THE CORRECT MESSAGE IS DISPLAYED.
+        String msg;
 
-        Toast.makeText(context, message,
+        if(intent.getAction()=="com.ebookfrenzy.sendbroadcast1"){
+            msg = "Broadcast intent detected 1" + intent.getAction() + intent.getExtras().getString("MyData1");
+        }
+        else {
+            msg = "Broadcast intent detected 2" + intent.getAction() + intent.getExtras().getString("MyData2");
+        }
+
+        Toast.makeText(context, msg,
                 Toast.LENGTH_LONG).show();
     }
 }

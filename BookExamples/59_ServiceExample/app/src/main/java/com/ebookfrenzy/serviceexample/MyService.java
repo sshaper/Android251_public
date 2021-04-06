@@ -6,6 +6,8 @@ import android.os.IBinder;
 import android.util.Log;
 import android.os.AsyncTask;
 
+
+//THIS JUST EXTENDS SERVICE SO IT WILL NOT BE ASYNC.
 public class MyService extends Service {
 
     public MyService() {
@@ -24,8 +26,8 @@ public class MyService extends Service {
         AsyncTask task = new SrvTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, startId);
 
         //IF YOU COMMENT OUT THE ASYNCTASK AND UNCOMMENT THIS CODE THE SERVICE WILL BE ON THE MAIN THREAD.
-        /*
-        Log.i(TAG, "Service onStartCommand " + startId);
+
+        /*Log.i(TAG, "Service onStartCommand " + startId);
         int i = 0;
         while (i <= 3) {
             try {

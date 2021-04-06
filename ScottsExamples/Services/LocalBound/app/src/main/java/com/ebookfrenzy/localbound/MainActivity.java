@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Intent intent = new Intent(this, BoundService.class);
+
+        //BIND_AUTO_CREATE  automatically create the service as long as the binding exists
         bindService(intent, myConnection, Context.BIND_AUTO_CREATE);
     }
 
@@ -41,8 +43,11 @@ public class MainActivity extends AppCompatActivity {
         myTextView.setText(currentTime);
     }
 
+
     private ServiceConnection myConnection = new ServiceConnection() {
         @Override
+
+        //The onServiceConnected() method will be called when the client binds successfully to the service.
         public void onServiceConnected(ComponentName className, IBinder service) {
             MyLocalBinder binder = (MyLocalBinder) service;
             myService = binder.getService();

@@ -15,6 +15,9 @@ public class Product {
 
     @ColumnInfo(name = "productName")
     private String name;
+
+    //Since it will not be necessary to reference the
+    //quantity column in SQL queries, a column name has not been assigned to the quantity variable.
     private int quantity;
 
     public Product(String name, int quantity) {

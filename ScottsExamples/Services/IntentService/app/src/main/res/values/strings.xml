@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name">StartedService1</string>
-    <string name="button">Click Me</string>
+    <string name="app_name">Intent Service</string>
+    <string name="btn2">Increment Number</string>
+    <string name="btn1">Start Service</string>
 </resources>

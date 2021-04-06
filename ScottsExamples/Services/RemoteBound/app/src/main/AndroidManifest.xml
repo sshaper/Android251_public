@@ -9,6 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <!--
+        https://developer.android.com/guide/topics/manifest/activity-element.html
+        The name of the process in which the activity should run. Normally, all components of an application run in a default process name created for the application and you do not need to use this attribute. But if necessary, you can override the default process name with this attribute, allowing you to spread your app components across multiple processes.
+        If the name assigned to this attribute begins with a colon (':'), a new process, private to the application, is created when it's needed and the activity runs in that process. If the process name begins with a lowercase character, the activity will run in a global process of that name, provided that it has permission to do so. This allows components in different applications to share a process, reducing resource usage.-->
+
         <service
             android:name=".RemoteService"
             android:enabled="true"

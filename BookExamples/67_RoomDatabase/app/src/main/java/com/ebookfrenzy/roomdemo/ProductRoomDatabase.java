@@ -19,11 +19,14 @@ public abstract class ProductRoomDatabase extends RoomDatabase {
                     INSTANCE =
                             Room.databaseBuilder(context.getApplicationContext(),
                                     ProductRoomDatabase.class,
-                                    "product_database").build();
+                                    "product_database")
+                                    //this was added when I attempted to reopen it because I had upgraded the version but
+                                    //did not do a migration, just easier for this application
+                                    .fallbackToDestructiveMigration()
+                                    .build();
                 }
             }
         }
         return INSTANCE;
     }
-
 }

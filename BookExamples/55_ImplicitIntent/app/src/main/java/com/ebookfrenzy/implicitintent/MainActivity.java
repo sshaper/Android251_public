@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
         if (isIntentAvailable(this, "android.intent.action.VIEW")) {
             startActivity(intent);
         }
+
+
         else {
             Log.i("scott","Activity not found");
         }
