@@ -1,0 +1,5 @@
+https://yalantis.com/blog/kotlin-vs-java-syntax/
+
+https://play.kotlinlang.org/byExample/01_introduction/01_Hello%20world
+
+https://www.tutorialspoint.com/kotlin/kotlin_basic_types.htm

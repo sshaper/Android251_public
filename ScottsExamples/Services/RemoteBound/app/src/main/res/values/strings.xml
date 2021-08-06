@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">RemoteBound</string>
-    <string name="send_message">Send Message</string>
-    <string name="button">Button</string>
-    <string name="textview">TextView</string>
-</resources>

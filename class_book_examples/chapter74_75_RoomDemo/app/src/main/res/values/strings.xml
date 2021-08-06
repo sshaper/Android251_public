@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">RoomDemo</string>
+    <string name="product_id">Product ID</string>
+    <string name="not_assigned">Not assigned</string>
+    <string name="product_name">Product Name</string>
+    <string name="product_quantity">Product Quantity</string>
+    <string name="add_string">Add</string>
+    <string name="find_string">Find</string>
+    <string name="delete_string">Delete</string>
+</resources>
