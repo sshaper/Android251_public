@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">View Binding Example</string>
+    <string name="textbox">Message will display here</string>
+    <string name="btn">Button</string>
+
+</resources>
