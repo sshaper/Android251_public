@@ -5,8 +5,8 @@ import android.os.Bundle
 import android.view.View
 
 //Because of the binding we don't need these imports anymore
-import android.widget.Button
-import android.widget.TextView
+//import android.widget.Button
+//import android.widget.TextView
 
 //This was added per the book
 import com.example.viewbindingexample.databinding.ActivityMainBinding
@@ -27,7 +27,6 @@ class MainActivity : AppCompatActivity() {
         //layout.
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         //val btn: Button = findViewById(R.id.btn)
         //val txtBx : TextView = findViewById(R.id.txtBx)
 
