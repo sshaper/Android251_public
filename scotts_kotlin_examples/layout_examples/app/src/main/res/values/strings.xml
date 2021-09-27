@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">layout_examples</string>
+    <string name="instructions">Here I have created some examples of layouts.  Go to the layout folder res>layout and select the layout example you want to see.</string>
+
+    <string name="button1">Button 1</string>
+    <string name="button2">Button 2</string>
+    <string name="button3">Button 3</string>
+
+    <string name="button4">Button 4</string>
+    <string name="button5">Button 5</string>
+
+    <string name="textview1">Text View 1</string>
+    <string name="textview2">Text View 2</string>
+    <string name="textview3">Text View 3</string>
+
+    <string name="textview4">Text View 4</string>
+    <string name="textview5">Text View 5</string>
+</resources>
