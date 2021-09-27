@@ -15,4 +15,9 @@
 
     <string name="textview4">Text View 4</string>
     <string name="textview5">Text View 5</string>
+
+   <string name="txtView" >Hello Class</string>
+    <string name="btn1">Button 1</string>
+
+
 </resources>
