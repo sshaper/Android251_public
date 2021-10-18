@@ -10,7 +10,6 @@ import android.view.ViewGroup
 import com.scottshaper.fragmentdemo.databinding.Fragment1Binding
 
 class Fragment1 : Fragment() {
-    //private lateinit var binding: Fragment1Binding
 
     private var _binding: Fragment1Binding? = null
     private val binding get() = _binding!!
@@ -55,7 +54,6 @@ class Fragment1 : Fragment() {
     }
 
     private fun buttonClicked(view: View) {
-        Log.i("zzzz",binding.frag1EditText.text.toString())
         var content = binding.frag1EditText.text.toString()
         activityCallback?.onButtonClick(content)
     }

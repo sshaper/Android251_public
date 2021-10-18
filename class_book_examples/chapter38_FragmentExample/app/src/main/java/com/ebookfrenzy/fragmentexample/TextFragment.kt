@@ -43,11 +43,13 @@ class TextFragment : Fragment() {
         return binding.root
     }
 
-    fun changeTextProperties(fontsize: Int, text: String)
+   fun changeTextProperties(fontsize: Int, text: String)
     {
         binding.textView2.textSize = fontsize.toFloat()
         binding.textView2.text = text
     }
+
+
 
     companion object {
         /**
