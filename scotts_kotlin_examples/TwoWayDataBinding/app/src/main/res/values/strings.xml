@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TwoWayDataBinding</string>
+    <string name="outputText">Text will appear here</string>
+    <string name="inputText">Enter Text Here</string>
+</resources>
