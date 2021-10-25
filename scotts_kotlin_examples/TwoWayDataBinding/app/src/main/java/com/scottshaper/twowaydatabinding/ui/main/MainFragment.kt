@@ -11,6 +11,7 @@ import com.scottshaper.twowaydatabinding.R
 
 import com.scottshaper.twowaydatabinding.databinding.MainFragmentBinding
 import com.scottshaper.twowaydatabinding.BR.myViewModel
+import com.scottshaper.twowaydatabinding.BR.uiController
 
 //import com.ebookfrenzy.viewmodeldemo.databinding.MainFragmentBinding
 //import com.ebookfrenzy.viewmodeldemo.BR.myViewModel
@@ -22,6 +23,7 @@ class MainFragment : Fragment() {
     }
 
     private lateinit var viewModel: MainViewModel
+
     lateinit var binding: MainFragmentBinding
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?): View {
@@ -35,6 +37,8 @@ class MainFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
         binding.setVariable(myViewModel, viewModel)
+        binding.setVariable(uiController, MainFragment)
+
 
     }
 

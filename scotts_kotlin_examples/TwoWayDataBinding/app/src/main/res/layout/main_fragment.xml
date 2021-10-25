@@ -6,6 +6,9 @@
         <variable
             name="myViewModel"
             type="com.scottshaper.twowaydatabinding.ui.main.MainViewModel" />
+        <variable
+            name="uiController"
+            type="com.scottshaper.twowaydatabinding.ui.main.MainFragment"/>
     </data>
 
 <androidx.constraintlayout.widget.ConstraintLayout
@@ -18,18 +21,19 @@
         android:id="@+id/inputText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:autofillHints=""
+        android:autofillHints="@string/outputText"
         android:ems="10"
-        android:text="@={myViewModel.inputText}"
-        android:onTextChanged="@{() -> myViewModel.changeText()}"
-        android:hint="@string/inputText"
         android:inputType="textPersonName"
         android:minHeight="48dp"
+        android:onTextChanged="@{() -> myViewModel.changeText()}"
+        android:text="@={myViewModel.inputText}"
+        android:textColorHint="#757575"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.13999999" />
+        app:layout_constraintVertical_bias="0.13999999"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/outputText"

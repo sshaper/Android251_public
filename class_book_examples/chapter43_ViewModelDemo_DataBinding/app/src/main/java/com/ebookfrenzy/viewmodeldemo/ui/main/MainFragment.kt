@@ -10,6 +10,7 @@ import androidx.databinding.DataBindingUtil
 import com.ebookfrenzy.viewmodeldemo.R
 
 import com.ebookfrenzy.viewmodeldemo.databinding.MainFragmentBinding
+
 import com.ebookfrenzy.viewmodeldemo.BR.myViewModel
 
 class MainFragment : Fragment() {

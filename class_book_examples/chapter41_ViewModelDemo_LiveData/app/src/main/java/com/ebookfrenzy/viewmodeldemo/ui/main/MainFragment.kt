@@ -42,12 +42,12 @@ class MainFragment : Fragment() {
         val resultObserver = Observer<Float> {
                 result -> binding.resultText.text = result.toString()
         }
-
         viewModel.getResult().observe(viewLifecycleOwner, resultObserver)
 
         binding.convertButton.setOnClickListener {
             if (binding.dollarText.text.isNotEmpty()) {
                 viewModel.setAmount(binding.dollarText.text.toString())
+
             } else {
                 binding.resultText.text = "No Value"
             }
