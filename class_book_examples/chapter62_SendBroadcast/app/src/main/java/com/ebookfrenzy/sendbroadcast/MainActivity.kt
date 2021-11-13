@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
     fun broadcastIntent(view: View) {
         val intent = Intent()
         intent.action = "com.ebookfrenzy.sendbroadcast"
+        intent.putExtra("scott"," I put this here")
         intent.flags = Intent.FLAG_INCLUDE_STOPPED_PACKAGES
         sendBroadcast(intent)
     }
