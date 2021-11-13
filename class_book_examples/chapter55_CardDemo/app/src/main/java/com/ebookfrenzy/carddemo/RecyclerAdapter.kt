@@ -29,8 +29,7 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
         R.drawable.android_image_8)
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
-        val v = LayoutInflater.from(viewGroup.context)
-            .inflate(R.layout.card_layout, viewGroup, false)
+        val v = LayoutInflater.from(viewGroup.context).inflate(R.layout.card_layout, viewGroup, false)
         return ViewHolder(v)
     }
 
