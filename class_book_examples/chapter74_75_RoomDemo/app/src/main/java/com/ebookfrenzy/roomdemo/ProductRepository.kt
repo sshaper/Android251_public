@@ -13,8 +13,7 @@ class ProductRepository(application: Application) {
     val allProducts: LiveData<List<Product>>?
 
     init {
-        val db: ProductRoomDatabase? =
-            ProductRoomDatabase.getDatabase(application)
+        val db: ProductRoomDatabase? =  ProductRoomDatabase.getDatabase(application)
         productDao = db?.productDao()
         allProducts = productDao?.getAllProducts()
     }

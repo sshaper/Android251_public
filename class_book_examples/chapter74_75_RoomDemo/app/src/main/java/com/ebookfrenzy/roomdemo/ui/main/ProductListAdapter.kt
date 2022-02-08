@@ -8,8 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ebookfrenzy.roomdemo.Product
 import com.ebookfrenzy.roomdemo.R
 
-class ProductListAdapter(private val productItemLayout: Int) :
-    RecyclerView.Adapter<ProductListAdapter.ViewHolder>() {
+class ProductListAdapter(private val productItemLayout: Int) :  RecyclerView.Adapter<ProductListAdapter.ViewHolder>() {
 
     private var productList: List<Product>? = null
 

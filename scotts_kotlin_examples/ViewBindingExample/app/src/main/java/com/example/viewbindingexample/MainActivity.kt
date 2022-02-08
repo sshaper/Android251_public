@@ -16,6 +16,8 @@ class MainActivity : AppCompatActivity() {
     //This was added per the book
     private lateinit var binding: ActivityMainBinding
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -33,6 +35,7 @@ class MainActivity : AppCompatActivity() {
         // btn.setOnClickListener(View.OnClickListener {
         // txtBx.text = "Hello Class"
         // })
+
 
         binding.btn.setOnClickListener(View.OnClickListener {
             binding.txtBx.text = "Hello Class"

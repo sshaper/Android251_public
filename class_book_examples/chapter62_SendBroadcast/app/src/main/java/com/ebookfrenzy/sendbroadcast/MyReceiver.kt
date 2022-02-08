@@ -8,12 +8,8 @@ import android.widget.Toast
 class MyReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
-        //I added the following two lines
-        var extras = intent.extras ?: return
-        var ext = extras.getString("scott")
 
-        val message = "Broadcast intent detected " + intent.action + ext
-
-        Toast.makeText(context, message, Toast.LENGTH_LONG).show()
+        val message = "Broadcast intent detected " + intent.action
+        Toast.makeText(context, message,Toast.LENGTH_LONG).show()
     }
 }

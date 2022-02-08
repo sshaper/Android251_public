@@ -13,8 +13,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun showWebPage(view: View) {
-        val intent = Intent(Intent.ACTION_VIEW,
-            Uri.parse("https://www.ebookfrenzy.com"))
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.ebookfrenzy.com"))
+
+        //val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.wccnet.edu"))
 
         startActivity(intent)
     }

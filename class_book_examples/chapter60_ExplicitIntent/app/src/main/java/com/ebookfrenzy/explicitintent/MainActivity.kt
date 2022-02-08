@@ -23,14 +23,17 @@ class MainActivity : AppCompatActivity() {
         val i = Intent(this, SecondActivity::class.java)
 
         val myString = binding.editText1.text.toString()
+
         i.putExtra("qString", myString)
+
+        i.putExtra("tag","scott")
+
         startActivityForResult(i, request_code)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if ((requestCode == request_code) &&
-            (resultCode == RESULT_OK)) {
+        if ((requestCode == request_code) && (resultCode == RESULT_OK)) {
 
             data?.let {
                 if (it.hasExtra("returnData")) {

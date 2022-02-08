@@ -22,8 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.seekBar.setOnSeekBarChangeListener(object :
             SeekBar.OnSeekBarChangeListener {
-            override fun onProgressChanged(seek: SeekBar,
-                                           progress: Int, fromUser: Boolean) {
+            override fun onProgressChanged(seek: SeekBar, progress: Int, fromUser: Boolean) {
                 count = progress
                 binding.countText.text = "${count} coroutines"
             }

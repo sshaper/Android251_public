@@ -10,13 +10,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
     }
 
     fun convertCurrency(view: View) {
 
         if (dollarText.text.isNotEmpty()) {
-
-
 
             val dollarValue = dollarText.text.toString().toFloat()
 

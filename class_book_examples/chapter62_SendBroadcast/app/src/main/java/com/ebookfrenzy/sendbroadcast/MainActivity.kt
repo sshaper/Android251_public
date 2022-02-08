@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         val filter = IntentFilter()
         filter.addAction("com.ebookfrenzy.sendbroadcast")
         filter.addAction("android.intent.action.ACTION_POWER_DISCONNECTED")
+        filter.addAction("android.intent.action.ACTION_BATTERY_LOW")
         receiver = MyReceiver()
         registerReceiver(receiver, filter)
     }
@@ -28,7 +29,6 @@ class MainActivity : AppCompatActivity() {
     fun broadcastIntent(view: View) {
         val intent = Intent()
         intent.action = "com.ebookfrenzy.sendbroadcast"
-        intent.putExtra("scott"," I put this here")
         intent.flags = Intent.FLAG_INCLUDE_STOPPED_PACKAGES
         sendBroadcast(intent)
     }
