@@ -15,7 +15,7 @@
         app:layout_constrainedHorizontal_bias="0.5"
         app:layout_constraintEnd_toStartOf="@+id/chainBtn2"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,6 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="200dp"
+        android:layout_marginEnd="20dp"
         android:text="@string/chainBtn2"
         app:layout_constraintEnd_toStartOf="@+id/chainBtn3"
         app:layout_constraintHorizontal_bias="0.5"
