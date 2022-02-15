@@ -24,4 +24,8 @@
     <string name="chainBtn3">ChBtn3</string>
 
 
+    <string name="sampTextView">Hello Class</string>
+    <string name="sampBtn">Button 1</string>
+
+
 </resources>
