@@ -20,6 +20,11 @@ class Fragment1 : Fragment() {
         fun onButtonClick(text: String)
     }
 
+    companion object {
+        fun newInstance() = Fragment1().apply { }
+    }
+
+    //THIS IS NEEDED BECAUSE FRAGMENT1 HAS A BUTTON ACTION THAT WILL BE SENDING DATA TO THE MAIN ACTIVITY, WHERE AS FRAGMENT 2 ONLY RECIEVES THE DATA.
     override fun onAttach(context: Context) {
         super.onAttach(context)
         try {
@@ -53,15 +58,13 @@ class Fragment1 : Fragment() {
         }
     }
 
+    //WHEN THE BUTTON IS CLICKED I GET THE CONTENT FROM THE BOX AND PASS IT AS A PARAMETER
+    //TO THE ONBUTTONCLICK METHOD LOCATED IN THE MAINACTIITY
     private fun buttonClicked(view: View) {
         var content = binding.frag1EditText.text.toString()
         activityCallback?.onButtonClick(content)
     }
 
 
-
-    companion object {
-        fun newInstance() = Fragment1().apply { }
-    }
 }
 
