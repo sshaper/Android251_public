@@ -11,10 +11,6 @@ import com.scottshaper.twowaydatabinding.R
 
 import com.scottshaper.twowaydatabinding.databinding.MainFragmentBinding
 import com.scottshaper.twowaydatabinding.BR.myViewModel
-import com.scottshaper.twowaydatabinding.BR.uiController
-
-//import com.ebookfrenzy.viewmodeldemo.databinding.MainFragmentBinding
-//import com.ebookfrenzy.viewmodeldemo.BR.myViewModel
 
 class MainFragment : Fragment() {
 
@@ -30,16 +26,18 @@ class MainFragment : Fragment() {
         //return inflater.inflate(R.layout.main_fragment, container, false)
         binding = DataBindingUtil.inflate(inflater, R.layout.main_fragment, container, false)
         binding.setLifecycleOwner(this)
+
+        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+        binding.setVariable(myViewModel, viewModel)
+
         return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
+    //DEPRECATED
+    /*override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
         binding.setVariable(myViewModel, viewModel)
-        binding.setVariable(uiController, MainFragment)
-
-
-    }
+    }*/
 
 }

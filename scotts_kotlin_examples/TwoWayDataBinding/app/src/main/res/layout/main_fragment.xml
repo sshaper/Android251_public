@@ -6,9 +6,6 @@
         <variable
             name="myViewModel"
             type="com.scottshaper.twowaydatabinding.ui.main.MainViewModel" />
-        <variable
-            name="uiController"
-            type="com.scottshaper.twowaydatabinding.ui.main.MainFragment"/>
     </data>
 
 <androidx.constraintlayout.widget.ConstraintLayout
