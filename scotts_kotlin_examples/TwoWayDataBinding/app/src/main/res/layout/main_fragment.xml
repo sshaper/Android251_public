@@ -22,7 +22,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:onTextChanged="@{() -> myViewModel.changeText()}"
+        android:afterTextChanged="@{() -> myViewModel.changeText()}"
         android:text="@={myViewModel.inputText}"
         android:textColorHint="#757575"
         app:layout_constraintBottom_toBottomOf="parent"
