@@ -7,8 +7,8 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.scottshaper.my_constraint_layout"
-        minSdk 21
+        applicationId "com.scottshaper.stopwatch"
+        minSdk 26
         targetSdk 32
         versionCode 1
         versionName "1.0"

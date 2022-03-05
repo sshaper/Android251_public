@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/17347/Android251_public/scotts_head_first_examples/My_constraint_layout/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/17347/Android251_public/scotts_kotlin_examples/SecretMessage/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/17347/Android251_public/scotts_kotlin_examples/SecretMessage/app/src/main/res/layout/fragment_message.xml" value="0.3658155289213132" />
+        <entry key="..\:/Users/17347/Android251_public/scotts_kotlin_examples/SecretMessage/app/src/main/res/layout/fragment_welcome.xml" value="0.15291936978683968" />
       </map>
     </option>
   </component>
