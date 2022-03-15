@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import com.ebookfrenzy.lifecycledemo.R
 
 import com.ebookfrenzy.lifecycledemo.DemoObserver
+
 import com.ebookfrenzy.lifecycledemo.DemoOwner
 
 class MainFragment : Fragment() {
@@ -26,15 +27,19 @@ class MainFragment : Fragment() {
         return inflater.inflate(R.layout.main_fragment, container, false)
     }
 
-    private lateinit var demoOwner: DemoOwner
+
+    //private lateinit var demoOwner: DemoOwner
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
 
-        demoOwner = DemoOwner()
-        demoOwner.startOwner()
-        demoOwner.stopOwner()
+        lifecycle.addObserver(DemoObserver())
+
+        //THESE METHODS ARE FOR THE CUSTOM CLASS.
+        //demoOwner = DemoOwner()
+        //demoOwner.startOwner()
+        //demoOwner.stopOwner()
 
     }
 

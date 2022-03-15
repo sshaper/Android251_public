@@ -40,6 +40,7 @@ class MainFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
+
         activity?.application?.let {
             val factory = SavedStateViewModelFactory(it, this)
 
