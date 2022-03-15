@@ -11,6 +11,8 @@ class MainViewModel : ViewModel() {
     fun setAmount(value: String) {
         this.dollarText = value
         result.setValue(value.toFloat() * rate)
+
+
     }
 
     fun getResult(): MutableLiveData<Float> {
