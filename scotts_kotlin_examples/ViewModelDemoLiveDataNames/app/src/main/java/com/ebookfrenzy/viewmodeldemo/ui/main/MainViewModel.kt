@@ -13,6 +13,7 @@ class MainViewModel : ViewModel() {
 
     //I HAD TO MAKE THIS PRIVATE OR IT WOULD CLASH WITH GETNAME FUNCTION AT THE BOTTOM
     private var name: MutableLiveData<String> = MutableLiveData()
+
     val names = arrayListOf<String>("Scott", "Karen", "Scottie", "Jazzy", "Oreo","Margaret","Jim","Danny","Michelle","Greg","Jackie","Jack","Tyson")
 
     /*

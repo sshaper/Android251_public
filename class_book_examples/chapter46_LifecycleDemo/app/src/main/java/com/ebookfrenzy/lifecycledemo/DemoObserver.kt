@@ -42,7 +42,7 @@ class DemoObserver: LifecycleObserver  {
 
     @OnLifecycleEvent(Lifecycle.Event.ON_ANY)
     fun onAny(owner: LifecycleOwner, event: Lifecycle.Event) {
-        Log.i(LOG_TAG, owner.lifecycle.currentState.name)
+        //Log.i(LOG_TAG, owner.lifecycle.currentState.name)
     }
 
 }
