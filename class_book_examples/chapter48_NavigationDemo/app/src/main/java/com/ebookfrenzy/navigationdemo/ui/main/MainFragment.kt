@@ -40,6 +40,8 @@ class MainFragment : Fragment() {
 
             action.setMessage(binding.userText.text.toString())
             Navigation.findNavController(it).navigate(action)
+
+
         }
     }
 

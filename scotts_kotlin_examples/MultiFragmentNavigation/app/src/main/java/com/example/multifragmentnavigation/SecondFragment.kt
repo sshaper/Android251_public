@@ -37,8 +37,6 @@ class SecondFragment : Fragment() {
             action.setMessage1(binding.textViewName.text.toString())
             Navigation.findNavController(it).navigate(action)
         }
-
-
     }
 
 

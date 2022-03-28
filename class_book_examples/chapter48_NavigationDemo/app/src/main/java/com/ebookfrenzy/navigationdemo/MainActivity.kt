@@ -6,8 +6,7 @@ import android.net.Uri
 
 import com.ebookfrenzy.navigationdemo.ui.main.MainFragment
 
-class MainActivity : AppCompatActivity(),
-    SecondFragment.OnFragmentInteractionListener {
+class MainActivity : AppCompatActivity(), SecondFragment.OnFragmentInteractionListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
