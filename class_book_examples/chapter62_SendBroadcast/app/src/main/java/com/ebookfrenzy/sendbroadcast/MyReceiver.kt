@@ -9,7 +9,15 @@ class MyReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
 
-        val message = "Broadcast intent detected " + intent.action
+        val extras = intent.extras?:return
+        var name = ""
+
+        extras.getString("name").let {
+            if (it != null) {
+                name = it
+            }
+        }
+        val message = "Broadcast intent detected " + intent.action + "  " + name
         Toast.makeText(context, message,Toast.LENGTH_LONG).show()
     }
 }
