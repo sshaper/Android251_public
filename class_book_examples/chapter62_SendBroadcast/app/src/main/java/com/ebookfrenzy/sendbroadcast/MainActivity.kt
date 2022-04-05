@@ -29,7 +29,10 @@ class MainActivity : AppCompatActivity() {
 
     fun broadcastIntent(view: View) {
         val intent = Intent()
+        //THIS ACTION IS THE KEY
         intent.action = "com.ebookfrenzy.sendbroadcast"
+
+        //THIS IS SOME DATA I AM SENDING
         intent.putExtra("name","Scott Shaper")
         intent.flags = Intent.FLAG_INCLUDE_STOPPED_PACKAGES
         sendBroadcast(intent)
