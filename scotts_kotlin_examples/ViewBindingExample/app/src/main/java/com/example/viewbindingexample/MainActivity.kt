@@ -29,6 +29,8 @@ class MainActivity : AppCompatActivity() {
         //layout.
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        //OLDER CODE
         //val btn: Button = findViewById(R.id.btn)
         //val txtBx : TextView = findViewById(R.id.txtBx)
 
