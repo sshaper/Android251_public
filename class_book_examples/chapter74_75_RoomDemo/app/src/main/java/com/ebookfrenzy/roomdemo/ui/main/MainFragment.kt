@@ -34,16 +34,22 @@ class MainFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = MainFragmentBinding.inflate(inflater, container, false)
+
+        listenerSetup()
+        observerSetup()
+        recyclerSetup()
+
         return binding.root
     }
 
+    /*DEPRECATED SO I MOVED THE FUNCTION CALLS TO ONCREATEVIEW
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         listenerSetup()
         observerSetup()
         recyclerSetup()
 
-    }
+    }*/
 
     private fun listenerSetup() {
 
@@ -70,13 +76,16 @@ class MainFragment : Fragment() {
 
     private fun observerSetup() {
 
-        viewModel.getAllProducts()?.observe(this, Observer { products ->
+        viewModel.getAllProducts()?.observe(viewLifecycleOwner, Observer { products ->
             products?.let  {
                 adapter?.setProductList(it)
             }
         })
 
-        viewModel.getSearchResults().observe(this, Observer { products ->
+        //ANDROID WANTED TO SPECIFY VIEWLIFECYCLEOWNER INSTEAD OF "THIS"
+        //viewModel.getSearchResults().observe(this, Observer { products ->
+
+        viewModel.getSearchResults().observe(viewLifecycleOwner, Observer { products ->
 
             products?.let {
                 if (it.isNotEmpty()) {

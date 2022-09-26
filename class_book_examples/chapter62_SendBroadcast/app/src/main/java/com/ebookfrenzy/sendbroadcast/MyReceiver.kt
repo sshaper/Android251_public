@@ -10,6 +10,8 @@ class MyReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
 
         val extras = intent.extras?:return
+
+
         var name = ""
 
         extras.getString("name").let {
@@ -17,7 +19,16 @@ class MyReceiver : BroadcastReceiver() {
                 name = it
             }
         }
-        val message = "Broadcast intent detected " + intent.action + "  " + name
+
+
+        var message = "Broadcast intent detected " + intent.action + "  " + name
+
+        //var message = "Broadcast intent detected " + intent.action
+
+        if(intent.action == "android.intent.action.ACTION_POWER_DISCONNECTED"){
+            message = "it works"
+        }
+
         Toast.makeText(context, message,Toast.LENGTH_LONG).show()
     }
 }
