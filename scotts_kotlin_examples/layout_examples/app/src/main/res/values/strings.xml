@@ -26,6 +26,7 @@
 
     <string name="sampTextView">Hello Class</string>
     <string name="sampBtn">Button 1</string>
+    <string name="editTextName">Some name here</string>
 
 
 </resources>

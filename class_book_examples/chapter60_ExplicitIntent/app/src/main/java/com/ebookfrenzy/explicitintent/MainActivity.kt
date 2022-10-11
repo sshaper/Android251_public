@@ -29,6 +29,8 @@ class MainActivity : AppCompatActivity() {
         i.putExtra("tag","scott")
 
         startActivityForResult(i, request_code)
+
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

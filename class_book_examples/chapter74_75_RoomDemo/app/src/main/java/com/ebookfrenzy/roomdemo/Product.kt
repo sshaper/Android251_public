@@ -21,10 +21,11 @@ class Product {
 
     constructor() {}
 
+    /*SHOWN IN BOOK BUT DOES NOT SEEM TO BE NEEDED
     constructor(id: Int, productname: String, quantity: Int) {
         this.productName = productname
         this.quantity = quantity
-    }
+    }*/
 
     constructor(productname: String, quantity: Int) {
         this.productName = productname

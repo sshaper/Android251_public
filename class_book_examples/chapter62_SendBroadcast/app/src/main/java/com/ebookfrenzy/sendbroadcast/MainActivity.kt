@@ -20,8 +20,10 @@ class MainActivity : AppCompatActivity() {
     private fun configureReceiver() {
         val filter = IntentFilter()
         filter.addAction("com.ebookfrenzy.sendbroadcast")
+
         filter.addAction("android.intent.action.ACTION_POWER_DISCONNECTED")
         filter.addAction("android.intent.action.ACTION_POWER_CONNECTED")
+
         //ACTIONS PAGE https://developer.android.com/reference/android/content/Intent#ACTION_VIEW
         receiver = MyReceiver()
         registerReceiver(receiver, filter)
@@ -34,6 +36,7 @@ class MainActivity : AppCompatActivity() {
 
         //THIS IS SOME DATA I AM SENDING
         intent.putExtra("name","Scott Shaper")
+
         intent.flags = Intent.FLAG_INCLUDE_STOPPED_PACKAGES
         sendBroadcast(intent)
     }
