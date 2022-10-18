@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Dolphin Test</string>
+    <string name="mainfragment">MainFragment</string>
+    <string name="convert">Convert</string>
+</resources>
