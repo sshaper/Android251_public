@@ -1,11 +1,12 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
 }
 
 android {
     buildFeatures{
-        viewBinding = true
+        dataBinding = true
     }
 
     namespace 'com.scottshaper.dolphintest'
