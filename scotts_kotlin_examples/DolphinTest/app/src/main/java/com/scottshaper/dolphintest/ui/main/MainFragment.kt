@@ -2,6 +2,7 @@ package com.scottshaper.dolphintest.ui.main
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import androidx.lifecycle.Observer
@@ -17,6 +18,7 @@ class MainFragment : Fragment() {
 
     //private var _binding: FragmentMainBinding? = null
     //private val binding get() = _binding!!
+
 
 
     companion object {
@@ -51,6 +53,7 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.setVariable(myViewModel, viewModel)
+        Log.d("zzzz","please work")
         //binding.resultText.text = viewModel.getResult().toString()
 
         //THIS IS REMOVED BECAUSE WE REPLACE IT WITH DATABINDING

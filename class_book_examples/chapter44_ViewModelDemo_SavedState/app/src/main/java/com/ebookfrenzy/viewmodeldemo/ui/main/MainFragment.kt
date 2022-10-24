@@ -37,10 +37,11 @@ class MainFragment : Fragment() {
         _binding = null
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-
-
+    //override fun onActivityCreated(savedInstanceState: Bundle?) {
+    //super.onActivityCreated(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+    
         activity?.application?.let {
             val factory = SavedStateViewModelFactory(it, this)
 
