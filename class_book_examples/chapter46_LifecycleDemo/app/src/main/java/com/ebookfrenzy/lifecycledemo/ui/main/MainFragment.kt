@@ -30,15 +30,15 @@ class MainFragment : Fragment() {
 
     private lateinit var demoOwner: DemoOwner
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
 
         lifecycle.addObserver(DemoObserver())
 
         //THESE METHODS ARE FOR THE CUSTOM CLASS.
         //demoOwner = DemoOwner()
-       // demoOwner.startOwner()
+        //demoOwner.startOwner()
         //demoOwner.stopOwner()
 
     }
