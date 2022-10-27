@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CompanionObjectDemo</string>
+    <string name="number">0</string>
+    <string name="button">Start Timer</string>
+</resources>
