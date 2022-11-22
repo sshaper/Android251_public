@@ -4,11 +4,10 @@ import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import androidx.lifecycle.SavedStateViewModelFactory
-
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.SavedStateViewModelFactory
 import com.ebookfrenzy.viewmodeldemo.R
 
 import com.ebookfrenzy.viewmodeldemo.databinding.MainFragmentBinding

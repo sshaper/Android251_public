@@ -26,6 +26,8 @@
             android:name="message1"
             app:argType="string"
             android:defaultValue="No Name" />
+
+
         <action
             android:id="@+id/action_secondFragment_to_thirdFragment"
             app:destination="@id/thirdFragment" />
@@ -38,7 +40,7 @@
         android:label="fragment_third"
         tools:layout="@layout/fragment_third" >
         <argument
-            android:name="message1"
+            android:name="message2"
             app:argType="string"
             android:defaultValue="No Name" />
 

@@ -24,8 +24,6 @@
             app:argType="string"
             android:defaultValue="No Message" />
 
-
-
     </fragment>
 
 </navigation>

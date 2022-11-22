@@ -26,8 +26,11 @@ class MainActivity : AppCompatActivity() {
 
         i.putExtra("qString", myString)
 
+        //I ADDED THIS ONE
         i.putExtra("tag","scott")
 
+        //startActivity IS A ONE WAY STREET AND DOES NOT NEED THE
+        //REQUEST_CODE
         startActivityForResult(i, request_code)
 
 

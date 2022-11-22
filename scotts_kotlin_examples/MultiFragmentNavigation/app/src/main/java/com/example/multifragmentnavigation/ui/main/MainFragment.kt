@@ -44,7 +44,7 @@ class MainFragment : Fragment() {
 
         binding.button2.setOnClickListener {
             val action2: MainFragmentDirections.ActionMainFragmentToThirdFragment = MainFragmentDirections.actionMainFragmentToThirdFragment()
-            action2.setMessage1(binding.name.text.toString())
+            action2.setMessage2(binding.name.text.toString())
             Navigation.findNavController(it).navigate(action2)
         }
     }

@@ -12,6 +12,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
+    //some common intents
+    //https://developer.android.com/guide/components/intents-common#Settings
+
     fun showWebPage(view: View) {
         val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.ebookfrenzy.com"))
 

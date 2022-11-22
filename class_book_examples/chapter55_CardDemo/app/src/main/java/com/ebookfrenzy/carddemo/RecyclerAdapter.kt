@@ -35,6 +35,7 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
     override fun getItemCount(): Int {
         return titles.size
+
     }
 
     override fun onBindViewHolder(viewHolder: ViewHolder, i: Int) {

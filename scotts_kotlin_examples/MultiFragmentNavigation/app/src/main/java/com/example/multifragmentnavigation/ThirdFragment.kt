@@ -31,7 +31,8 @@ class ThirdFragment : Fragment() {
         super.onStart()
         arguments?.let {
             val args = ThirdFragmentArgs.fromBundle(it)
-                binding.textViewName.text = args.message1
+                binding.textViewName.text = args.message2
+
             }
     }
 
