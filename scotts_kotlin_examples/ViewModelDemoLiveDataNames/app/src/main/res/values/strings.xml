@@ -1,5 +1,0 @@
-<resources>
-    <string name="app_name">ViewModelDemo</string>
-    <string name="displayName">Name will appear here</string>
-    <string name="convert">Display Names</string>
-</resources>
