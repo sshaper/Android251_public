@@ -14,7 +14,7 @@ import com.example.chapter36_customgestures.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity(), OnGesturePerformedListener {
 
     private lateinit var binding: ActivityMainBinding
-    var gLibrary: GestureLibrary? = null
+    private var gLibrary: GestureLibrary? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
