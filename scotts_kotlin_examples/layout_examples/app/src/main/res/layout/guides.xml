@@ -50,6 +50,4 @@
         app:layout_constraintGuide_begin="70dp" />
 
 
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
