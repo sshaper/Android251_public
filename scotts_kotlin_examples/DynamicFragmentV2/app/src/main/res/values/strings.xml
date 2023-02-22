@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">FragmentDemo</string>
+    <string name="btn1">Add Fragment 1</string>
+    <string name="btn2">Add Fragment 2</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="fragment1">THIS IS FRAGMENT 1</string>
+    <string name="fragment2">THIS IS FRAGMENT 2</string>
+
+    <string name="frag1btn">Send data to Frag 2</string>
+    <string name="frag1EditText">Enter some text</string>
+</resources>
