@@ -39,6 +39,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn1"
+
         tools:layout="@layout/fragment_1" /><!-- I had to add this for it to appear in the design view-->
 
     <androidx.fragment.app.FragmentContainerView
@@ -48,5 +49,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fragmentContainerView1"
-       tools:layout="@layout/fragment_2" /><!-- I had to add this for it to appear in the design view-->
+
+        tools:layout="@layout/fragment_2" /><!-- I had to add this for it to appear in the design view-->
 </androidx.constraintlayout.widget.ConstraintLayout>

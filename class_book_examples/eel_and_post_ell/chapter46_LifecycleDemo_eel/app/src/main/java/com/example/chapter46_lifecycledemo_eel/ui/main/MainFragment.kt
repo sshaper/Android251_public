@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.chapter46_lifecycledemo_eel.R
 
-import com.example.chapter46_lifecycledemo_eel.DemoObserver
+//import com.example.chapter46_lifecycledemo_eel.DemoObserver
 import com.example.chapter46_lifecycledemo_eel.DemoOwner
 
 class MainFragment : Fragment() {

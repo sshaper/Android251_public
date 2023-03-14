@@ -14,7 +14,7 @@ class Fragment1 : Fragment() {
     private var _binding: Fragment1Binding? = null
     private val binding get() = _binding!!
 
-    var activityCallback: Fragment1.Frag1Listener? = null
+    var activityCallback: Frag1Listener? = null
 
     interface Frag1Listener {
         fun onButtonClick(text: String)
@@ -46,7 +46,7 @@ class Fragment1 : Fragment() {
         _binding = null
     }
 
-    /*THE FOLLOWING CODE WAS DEPRECATED THANKS ANDROID
+    /*THE FOLLOWING CODE WAS DEPRECATED
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
     }*/

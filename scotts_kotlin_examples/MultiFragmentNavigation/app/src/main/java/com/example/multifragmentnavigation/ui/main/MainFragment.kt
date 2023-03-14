@@ -37,6 +37,7 @@ class MainFragment : Fragment() {
             //Navigation.findNavController(it).navigate(
                 //R.id.action_mainFragment_to_secondFragment
             //)
+
             val action1: MainFragmentDirections.ActionMainFragmentToSecondFragment = MainFragmentDirections.actionMainFragmentToSecondFragment()
             action1.setMessage1(binding.name.text.toString())
             Navigation.findNavController(it).navigate(action1)

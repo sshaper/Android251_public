@@ -40,6 +40,7 @@ class MainFragment : Fragment() {
         val resultObserver = Observer<Float> {
                 result -> binding.resultText.text = result.toString()
         }
+
         viewModel.getResult().observe(viewLifecycleOwner, resultObserver)
 
         binding.convertButton.setOnClickListener {

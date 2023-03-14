@@ -13,8 +13,8 @@ class DemoOwner: LifecycleOwner {
         lifecycleRegistry = LifecycleRegistry(this)
 
         //I ADDED THE CUSTOMOBSERVER JUST TO SHOW WHAT CAN BE DONE WITH ANOTHER ONE.  
-        lifecycle.addObserver(DemoObserver())
-        //lifecycle.addObserver(CustomObserver())
+        //lifecycle.addObserver(DemoObserver())
+        lifecycle.addObserver(CustomObserver())
     }
 
     fun startOwner() {

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MultiFragmentNavigation</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="toFrag2Btn">Go to Frag 2</string>
+    <string name="toFrag3Btn">Go to Frag 3</string>
+    <string name="toHomeBtn">Got to Home</string>
+    <string name="enterName">Enter Name</string>
+    <string name="displayName">Display Name</string>
+    <string name="home">Home</string>
+    <string name="frag2">Fragment 2</string>
+    <string name="frag3">Fragment 3</string>
+
+
+</resources>

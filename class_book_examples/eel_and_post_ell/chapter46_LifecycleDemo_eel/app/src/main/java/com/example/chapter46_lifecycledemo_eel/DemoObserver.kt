@@ -19,6 +19,7 @@ class DemoObserver: DefaultLifecycleObserver {
     override fun onResume(owner: LifecycleOwner) {
         super.onResume(owner)
         Log.i(LOG_TAG, "Demo Observer onResume")
+
     }
 
     override fun onPause(owner: LifecycleOwner){
