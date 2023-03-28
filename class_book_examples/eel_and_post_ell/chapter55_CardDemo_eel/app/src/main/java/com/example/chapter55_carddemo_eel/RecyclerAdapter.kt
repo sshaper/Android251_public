@@ -33,10 +33,14 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
     override fun getItemCount(): Int {
         return titles.size
+        //return 102
+        //return 14
 
     }
 
     override fun onBindViewHolder(viewHolder: ViewHolder, i: Int) {
+
+
         viewHolder.itemTitle.text = titles[i]
         viewHolder.itemDetail.text = details[i]
         viewHolder.itemImage.setImageResource(images[i])

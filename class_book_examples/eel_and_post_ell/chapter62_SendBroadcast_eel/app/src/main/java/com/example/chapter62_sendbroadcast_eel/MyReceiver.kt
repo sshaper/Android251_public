@@ -18,6 +18,7 @@ class MyReceiver : BroadcastReceiver() {
         }
 
         var message = "Broadcast intent detected " + intent.action + "  " + name
+
         //I DID THIS TO DETERMINE WHICH MESSAGE TO FIRE DEPENDING ON THE ACTION
         //BASICALLY I JUST CHANGE THE MESSAGE.
         if(intent.action == "android.intent.action.ACTION_POWER_DISCONNECTED"){

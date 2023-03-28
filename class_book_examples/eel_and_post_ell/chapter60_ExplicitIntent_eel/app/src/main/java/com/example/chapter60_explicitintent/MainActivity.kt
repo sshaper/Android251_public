@@ -1,9 +1,14 @@
 package com.example.chapter60_explicitintent
 
+import android.app.Activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.content.Intent
+import androidx.activity.result.contract.ActivityResultContract
+
+import androidx.activity.result.ActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import com.example.chapter60_explicitintent.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -26,15 +31,29 @@ class MainActivity : AppCompatActivity() {
         i.putExtra("qString", myString)
 
         //I ADDED THIS ONE
-        i.putExtra("tag","scott")
+        i.putExtra("myname","scott")
 
         //startActivity IS A ONE WAY STREET AND DOES NOT NEED THE
         //REQUEST_CODE
-        startActivityForResult(i, request_code)
-
-
+        //startActivityForResult(i, request_code)
+        startForResult.launch(i)
     }
 
+    val startForResult = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()) {
+            result: ActivityResult ->
+        if (result.resultCode == Activity.RESULT_OK) {
+            val data = result.data
+            data?.let {
+                if (it.hasExtra("returnData")) {
+                    val returnString = it.extras?.getString("returnData")
+                    binding.textView1.text = returnString
+                }
+            }
+        }
+    }
+
+/*OLD WAY CURRENTLY IN BOOK
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if ((requestCode == request_code) && (resultCode == RESULT_OK)) {
@@ -46,5 +65,5 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-    }
+    }*/
 }

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.net.Uri
+import android.util.Log
 import com.example.multifragmentnavigationv2.databinding.FragmentThirdBinding
 
 
@@ -32,6 +33,8 @@ class ThirdFragment : Fragment() {
         arguments?.let {
             val args = ThirdFragmentArgs.fromBundle(it)
             binding.textViewName.text = args.message2
+            Log.i("zzz",args.message3)
+
 
         }
     }

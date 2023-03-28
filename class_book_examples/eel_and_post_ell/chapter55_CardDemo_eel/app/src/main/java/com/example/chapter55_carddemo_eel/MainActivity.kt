@@ -2,6 +2,7 @@ package com.example.chapter55_carddemo_eel
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.chapter55_carddemo_eel.databinding.ActivityMainBinding
@@ -38,6 +39,7 @@ class MainActivity : AppCompatActivity() {
         //setSupportActionBar(binding.toolbar)
 
         layoutManager = LinearLayoutManager(this)
+        //layoutManager = GridLayoutManager(this,1)
         binding.contentMain.recyclerView.layoutManager = layoutManager
         adapter = RecyclerAdapter()
         binding.contentMain.recyclerView.adapter = adapter

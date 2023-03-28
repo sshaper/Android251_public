@@ -50,6 +50,7 @@ class SecondFragment : Fragment() {
         arguments?.let {
             val args = SecondFragmentArgs.fromBundle(it)
             binding.argText.text = args.message
+
         }
     }
 
