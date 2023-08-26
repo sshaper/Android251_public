@@ -2,7 +2,6 @@ package com.example.chapter18_androidsample_viewbinding_eel
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 
 import com.example.chapter18_androidsample_viewbinding_eel.databinding.ActivityMainBinding
 
@@ -20,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
     }
 
-    fun convertCurrency(view: View) {
+    fun convertCurrency() {
 
         if (binding.dollarText.text.isNotEmpty()) {
 
