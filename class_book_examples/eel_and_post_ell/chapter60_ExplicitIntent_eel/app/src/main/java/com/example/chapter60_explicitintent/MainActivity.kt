@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity() {
         startForResult.launch(i)
     }
 
+
     val startForResult = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()) {
             result: ActivityResult ->

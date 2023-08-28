@@ -38,8 +38,6 @@ class MainActivity : AppCompatActivity() {
         val num = (0..(names.size - 1)).random()
         binding.displayName.text = names[num]
         Thread.sleep(3000)
-        //THIS WILL NOT WORK WITH RUN BLOCKING
-        //displayNamesNoCoroutine()
     }
 
 
@@ -53,7 +51,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     suspend fun pause(){
-        delay(1000)
+        delay(1)
         displayNamesNotBlocking()
     }
 

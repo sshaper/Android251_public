@@ -25,7 +25,7 @@ class SecondActivity : AppCompatActivity() {
         //val tag = extras.getString("tag")
 
         Log.i("zzz",tag.toString())
-        Log.i("zzz","test")
+        ///Log.i("zzz","test")
 
         binding.textView2.text = qString
     }
