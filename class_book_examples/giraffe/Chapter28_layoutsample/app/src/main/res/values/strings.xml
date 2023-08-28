@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Chapter28_layoutsample</string>
+    <string name="button1">Buy Now</string>
+    <string name="button2">Pricing</string>
+    <string name="button3">Details</string>
+    <string name="textView">Samsung Galaxy S23</string>
+    <string name="image">Image of Samsung Galaxy S23</string>
+</resources>
