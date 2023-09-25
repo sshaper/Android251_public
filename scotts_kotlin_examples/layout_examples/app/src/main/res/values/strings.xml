@@ -26,6 +26,12 @@
     <string name="chainBtn3">ChBtn3</string>
 
 
+    <string name="flowbutton1">Flow Btn 1</string>
+    <string name="flowbutton2">Flow Btn 2</string>
+    <string name="flowbutton3">Flow Btn 3</string>
+    <string name="flowbutton4">Flow Btn 4</string>
+    <string name="flowbutton5">Flow Btn 5</string>
+
     <string name="sampTextView">Hello Class</string>
     <string name="sampBtn">Button 1</string>
     <string name="editTextName">Some name here</string>
