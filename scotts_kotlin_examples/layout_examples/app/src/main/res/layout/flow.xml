@@ -38,11 +38,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:flow_wrapMode="chain"
-        app:flow_maxElementsWrap="3"
-        app:flow_firstHorizontalStyle="packed"
-        app:flow_lastHorizontalStyle="spread_inside"
         app:constraint_referenced_ids="flowbutton1,flowbutton2,flowbutton3,flowbutton4,flowbutton5"
+        app:flow_firstHorizontalStyle="spread"
+        app:flow_lastHorizontalStyle="spread_inside"
+        app:flow_maxElementsWrap="2"
+        app:flow_wrapMode="chain"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">layout_examples</string>
+    <string name="app_name">Scotts Layout Example</string>
     <string name="instructions">Here I have created some examples of layouts.  Go to the layout folder res>layout and select the layout example you want to see.</string>
 
     <string name="imageDescription">Image of person</string>
