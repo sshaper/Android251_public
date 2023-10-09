@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity(), OnGesturePerformedListener {
     }
 
     private fun gestureSetup()  {
+
         gLibrary = GestureLibraries.fromRawResource(this,
             R.raw.gestures)
         if (gLibrary?.load() == false) {

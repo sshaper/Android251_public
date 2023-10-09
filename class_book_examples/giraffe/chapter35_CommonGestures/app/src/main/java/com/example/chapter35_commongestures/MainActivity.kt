@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity(),
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //GestureDetectorCompat(this,this)
         this.gDetector = GestureDetectorCompat(this, this)
         gDetector?.setOnDoubleTapListener(this)
     }

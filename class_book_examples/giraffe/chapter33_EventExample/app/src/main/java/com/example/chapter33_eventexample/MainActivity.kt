@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.myButton.setOnLongClickListener {
             binding.statusText.text = getText(R.string.buttonLongClick)
-            false
+            true
             //book had
             //binding.statusText.text = "button long clicked"
         }

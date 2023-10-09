@@ -24,7 +24,8 @@ class Fragment1 : Fragment() {
         fun newInstance() = Fragment1().apply { }
     }
 
-    //THIS IS NEEDED BECAUSE FRAGMENT1 HAS A BUTTON ACTION THAT WILL BE SENDING DATA TO THE MAIN ACTIVITY, WHERE AS FRAGMENT 2 ONLY RECIEVES THE DATA.
+    //THIS IS NEEDED BECAUSE FRAGMENT1 HAS A BUTTON ACTION THAT WILL BE SENDING DATA TO THE MAIN ACTIVITY,
+    // WHERE AS FRAGMENT 2 ONLY RECIEVES THE DATA.
     override fun onAttach(context: Context) {
         super.onAttach(context)
         try {
