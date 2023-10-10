@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView"
+        android:id="@+id/fragmentContainerView3"
         android:name="com.example.chapter38_fragmentexample.ToolbarFragment"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -18,9 +18,9 @@
         tools:layout="@layout/fragment_toolbar" />
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/text_fragment"
+        android:id="@+id/fragmentContainerView4"
         android:name="com.example.chapter38_fragmentexample.TextFragment"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
