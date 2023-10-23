@@ -49,7 +49,7 @@ class MainFragment : Fragment() {
         }
         viewModel.getSeconds().observe(viewLifecycleOwner, resultObserver)
 
-        //ONCE THE BUTTON IN CLICKED IT CAN BE CLICKED AGAIN.  THIS WILL HIDE THE BUTTON WHEN THE SCREEN IS ROTATED (RE-DRAWN)
+        //ONCE THE BUTTON IN CLICKED IT CAN'T BE CLICKED AGAIN.  THIS WILL HIDE THE BUTTON WHEN THE SCREEN IS ROTATED (RE-DRAWN)
         if(viewModel.btn == false){
             binding.strTimerBtn.setVisibility(View.INVISIBLE)
         }

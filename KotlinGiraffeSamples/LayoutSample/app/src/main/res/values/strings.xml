@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LayoutSample</string>
+    <string name="buy_now">Buy Now</string>
+    <string name="pricing">Pricing</string>
+    <string name="details">Details</string>
+    <string name="samsung_galaxy_s23">Samsung Galaxy S23</string>
+</resources>
