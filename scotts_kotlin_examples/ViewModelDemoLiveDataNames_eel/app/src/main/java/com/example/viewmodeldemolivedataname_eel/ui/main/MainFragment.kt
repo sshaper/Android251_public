@@ -39,7 +39,7 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
 
-        /*NAMEOBSERVER FIRES WHEN IT SEES THAT NAME HAS CHANGED AND THEN THAT HAPPENS IT PUT THE VALUE INTO THE TEXT FIELD*/
+        /*NAMEOBSERVER FIRES WHEN IT SEES THAT NAME HAS CHANGED AND WHEN THAT HAPPENS IT PUT THE VALUE INTO THE TEXT FIELD*/
         val nameObserver = Observer<String> {
                 name -> binding.nameoutput.text = name.toString()
         }
