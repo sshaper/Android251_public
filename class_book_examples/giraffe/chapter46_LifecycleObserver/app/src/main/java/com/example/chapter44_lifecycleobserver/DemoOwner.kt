@@ -5,7 +5,8 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LifecycleRegistry
 
 
-class DemoOwner: LifecycleOwner {
+class DemoOwner: LifecycleOwner{
+
     private val lifecycleRegistry: LifecycleRegistry = LifecycleRegistry(this)
 
     init {
@@ -20,7 +21,9 @@ class DemoOwner: LifecycleOwner {
         lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_STOP)
     }
 
-    override fun getLifecycle(): Lifecycle {
-        return lifecycleRegistry
-    }
+   override fun getLifecycle(): Lifecycle {
+       return lifecycleRegistry
+   }
+
+
 }
