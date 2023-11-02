@@ -33,6 +33,7 @@ class ThirdFragment : Fragment() {
         arguments?.let {
             val args = ThirdFragmentArgs.fromBundle(it)
             binding.textViewName.text = args.message2
+
             Log.i("zzz",args.message3)
 
 

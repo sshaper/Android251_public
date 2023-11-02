@@ -28,7 +28,6 @@ class FirstFragment : Fragment() {
             val action: FirstFragmentDirections.MainToSecond = FirstFragmentDirections.mainToSecond()
             action.message = binding.userText.text.toString()
             Navigation.findNavController(it).navigate(action)
-
         }
     }
 
