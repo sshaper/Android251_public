@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">chapter59_ImplicitIntent</string>
+    <string name="wpBtn">Show Web Page</string>
+    <string name="linksBtn">Enable Links</string>
+</resources>
