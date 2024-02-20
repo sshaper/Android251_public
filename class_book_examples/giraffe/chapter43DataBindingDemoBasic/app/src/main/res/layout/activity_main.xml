@@ -31,11 +31,19 @@
         android:hint="@string/inputDecimal"
         />
 
+    <!--
+    IN THE TEXTVIEW THE BOOK HAS THE FOLLOWING CODE
+     android:text='@{safeUnbox(myViewModel.result) == 0.0 ? "Enter value" : String.valueOf(safeUnbox(myViewModel.result)) + " euros"}'
+
+     YOU DO NOT NEED TO USE SAFEUNBOX THAT IS FOR JAVA. SEE EXAMPLE BELOW WITHOUT IT.
+     -->
+
+
     <TextView
         android:id="@+id/resultText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text='@{safeUnbox(myViewModel.result) == 0.0 ? "Enter value" : String.valueOf(safeUnbox(myViewModel.result)) + " euros"}'
+        android:text='@{myViewModel.result == 0.0 ? "Enter value" : String.valueOf(myViewModel.result) + " euros"}'
         app:layout_constraintBottom_toTopOf="@+id/convertButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

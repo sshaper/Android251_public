@@ -12,6 +12,7 @@ class ProductRepository (application: Application) {
     private var productDao: ProductDao?
     private val coroutineScope = CoroutineScope(Dispatchers.Main)
     val allProducts: LiveData<List<Product>>?
+
     init {
         val db: ProductRoomDatabase? =
             ProductRoomDatabase.getDatabase(application)

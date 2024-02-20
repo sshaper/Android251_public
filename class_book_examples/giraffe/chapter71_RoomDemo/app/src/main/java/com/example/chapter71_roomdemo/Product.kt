@@ -14,8 +14,12 @@ class Product {
 
     @ColumnInfo(name = "productName")
     var productName: String? = null
+
     var quantity: Int = 0
+
+
     constructor() {}
+
     constructor(id: Int, productname: String, quantity: Int) {
         this.productName = productname
         this.quantity = quantity

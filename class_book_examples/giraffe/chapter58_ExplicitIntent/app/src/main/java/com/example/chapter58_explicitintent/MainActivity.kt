@@ -36,7 +36,6 @@ class MainActivity : AppCompatActivity() {
 
     fun sendText(view: View){
         val i = Intent(this, SecondActivity::class.java)
-
         val myString = binding.editText1.text.toString()
         i.putExtra("qString",myString)
         //startActivity(i)

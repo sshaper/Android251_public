@@ -12,7 +12,7 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="100dp"
         android:text="@string/textview1"
-        android:textSize="14sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -45,5 +45,7 @@
         android:layout_height="wrap_content"
         app:barrierDirection="right"
         app:constraint_referenced_ids="textView1,textView2" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

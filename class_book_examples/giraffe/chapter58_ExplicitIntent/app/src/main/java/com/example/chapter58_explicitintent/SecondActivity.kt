@@ -30,6 +30,7 @@ class SecondActivity : AppCompatActivity() {
         val returnString = binding.editText2.text.toString()
         data.putExtra("returnData",returnString)
 
+        //HERE YOU COULD HAVE SOME LOGIC THAT IF THE DATA IS GOOD THEN RESULT_OK BUT IF NOT THEN RESULT_CANCELED
         setResult(RESULT_OK, data)
         super.finish()
 

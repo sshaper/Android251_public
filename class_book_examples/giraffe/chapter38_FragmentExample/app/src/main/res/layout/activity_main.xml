@@ -18,7 +18,7 @@
         tools:layout="@layout/fragment_toolbar" />
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView4"
+        android:id="@+id/text_fragment"
         android:name="com.example.chapter38_fragmentexample.TextFragment"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

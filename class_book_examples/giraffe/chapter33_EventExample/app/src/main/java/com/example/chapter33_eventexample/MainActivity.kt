@@ -17,17 +17,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
+
         binding.myButton.setOnClickListener {
             binding.statusText.text = getText(R.string.buttonClick)
-            //book had
-            //binding.statusText.text = "button clicked"
+
         }
 
         binding.myButton.setOnLongClickListener {
             binding.statusText.text = getText(R.string.buttonLongClick)
-            true
-            //book had
-            //binding.statusText.text = "button long clicked"
+            false
+
         }
     }
 }

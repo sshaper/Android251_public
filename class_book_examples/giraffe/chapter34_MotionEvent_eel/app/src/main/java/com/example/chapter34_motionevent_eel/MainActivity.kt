@@ -1,6 +1,7 @@
 package com.example.chapter34_motionevent_eel
 
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MotionEvent
@@ -14,6 +15,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
+    @SuppressLint("ClickableViewAccessibility")//this gets rid of accessibility warning (not in book)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //not needed
@@ -22,15 +24,13 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.root.setOnTouchListener{_, m: MotionEvent -> handleTouch(m)
+
+        binding.root.setOnTouchListener {_, m: MotionEvent ->
+            handleTouch(m)
             true
         }
 
-        //previous code does the same thing
-        //binding.activityMain.setOnTouchListener {_, m: MotionEvent ->
-            //handleTouch(m)
-            //true
-       // }
+
     }
 
     private fun handleTouch(m: MotionEvent)
@@ -44,20 +44,21 @@ class MainActivity : AppCompatActivity() {
             val id = m.getPointerId(i)
             val action = m.actionMasked
             val actionIndex = m.actionIndex
-            var actionString: String
+            //var actionString: String  (book had this notice that we can use val when directly assigning)
 
-            when (action)
-            {
-                MotionEvent.ACTION_DOWN -> actionString = "DOWN"
-                MotionEvent.ACTION_UP -> actionString = "UP"
-                MotionEvent.ACTION_POINTER_DOWN -> actionString = "PNTR DOWN"
-                MotionEvent.ACTION_POINTER_UP -> actionString = "PNTR UP"
-                MotionEvent.ACTION_MOVE -> actionString = "MOVE"
-                else -> actionString = ""
+            //this is a recommended action from Android not in book
+            val actionString: String = when (action) {
+                MotionEvent.ACTION_DOWN -> "DOWN"
+                MotionEvent.ACTION_UP -> "UP"
+                MotionEvent.ACTION_POINTER_DOWN -> "PNTR DOWN"
+                MotionEvent.ACTION_POINTER_UP -> "PNTR UP"
+                MotionEvent.ACTION_MOVE -> "MOVE"
+                else -> ""
             }
 
+            //I added the pointer count not in book
             val touchStatus =
-                "Action: $actionString Index: $actionIndex ID: $id X: $x Y: $y"
+                "Pointer count: $pointerCount Action: $actionString Index: $actionIndex ID: $id X: $x Y: $y"
 
             if (id == 0)
                 binding.textView1.text = touchStatus

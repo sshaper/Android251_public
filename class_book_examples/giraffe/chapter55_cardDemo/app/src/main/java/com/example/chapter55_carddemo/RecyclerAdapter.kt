@@ -43,6 +43,7 @@ override fun onBindViewHolder(viewHolder: ViewHolder, i: Int) {
 
 override fun getItemCount(): Int {
     return titles.size
+    //return 15
 }
 
 inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

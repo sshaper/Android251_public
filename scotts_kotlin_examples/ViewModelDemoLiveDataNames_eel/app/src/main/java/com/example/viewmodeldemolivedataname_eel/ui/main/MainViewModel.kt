@@ -14,7 +14,7 @@ class MainViewModel : ViewModel() {
     //I HAD TO MAKE THIS PRIVATE OR IT WOULD CLASH WITH GETNAME FUNCTION AT THE BOTTOM
     private var name: MutableLiveData<String> = MutableLiveData()
 
-    val names = arrayListOf<String>("Scott", "Karen", "Scottie", "Jazzy", "Oreo","Margaret","Jim","Danny","Michelle","Greg","Jackie","Jack","Tyson")
+    val names = arrayListOf<String>("Scott", "Karen", "Scottie", "Oreo","Michelle","Greg","Jackie","Jack","Tyson","Sam","John","Mark","James")
 
     /*
     DISPLAYNAMES TAKES A RANDOM NAME FROM THE ARRAY AND SETS IT TO THE NAME VARIABLE ONCE IT IS THERE IT CALLS PAUSE WHICH PAUSES FOR 1 SECOND AND THEN CALLS DISPLAY NAMES AGAIN.  NOTICE THAT WHEN WE CHANGE THE VALUES OF NAMES THE UI DISPLAYS THE NEW VALUE (NAME) THAT IS BECAUSE THE OBSERVER IS SEEING THE CHANGE AND DISPLAYING IT.
