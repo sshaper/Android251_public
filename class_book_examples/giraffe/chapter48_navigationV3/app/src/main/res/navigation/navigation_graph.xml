@@ -23,5 +23,9 @@
             android:name="message"
             app:argType="string"
             android:defaultValue="No Message" />
+        <argument
+            android:name="message1"
+            app:argType="string"
+            android:defaultValue="No Message" />
     </fragment>
 </navigation>

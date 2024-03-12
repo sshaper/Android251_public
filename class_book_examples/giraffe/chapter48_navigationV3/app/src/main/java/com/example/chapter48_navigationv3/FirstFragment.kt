@@ -50,8 +50,11 @@ class FirstFragment : Fragment() {
         binding.button.setOnClickListener {
             //Navigation.findNavController(it).navigate(
                 //R.id.mainToSecond)
+            //val action: FirstFragmentDirections.MainToSecond = FirstFragmentDirections.mainToSecond()
             val action: FirstFragmentDirections.MainToSecond = FirstFragmentDirections.mainToSecond()
             action.message = binding.userText.text.toString()
+            action.message1 = "scott"
+
             Navigation.findNavController(it).navigate(action)
         }
     }
