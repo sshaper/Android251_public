@@ -11,15 +11,13 @@ import com.example.chapter48_navigationv3.databinding.FragmentFirstBinding
 import com.example.chapter48_navigationv3.databinding.FragmentSecondBinding
 
 class SecondFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
     private var _binding: FragmentSecondBinding? = null
     private val binding get() = _binding!!
 
+    //BOOK STATED THIS IS ADDED AUTOMATICALLY BUT I DID NOT SEE THAT AS THE CASE
+    //I ALSO DID NOT SEE THAT IT IS NEEDED AS I REMOVED IT AND IT WAS FINE.
     interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
         fun onFragmentInteraction(uri: Uri)
     }
 
@@ -33,8 +31,6 @@ class SecondFragment : Fragment() {
         return binding.root
     }
 
-
-
     override fun onStart() {
         super.onStart()
         arguments?.let {
@@ -44,7 +40,5 @@ class SecondFragment : Fragment() {
         }
     }
 
-
-
-    }
+}
 
