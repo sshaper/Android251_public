@@ -52,6 +52,30 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun observerSetup() {
+        viewModel.getAllProducts()?.observe(this) { products ->
+            products?.let {
+                adapter?.setProductList(it)
+            }
+        }
+        viewModel.getSearchResults().observe(this) { products ->
+            products?.let {
+                if (it.isNotEmpty()) {
+                    binding.productID.text = String.format(Locale.US, "%d", it[0].id)
+                    binding.productName.setText(it[0].productName)
+                    binding.productQuantity.setText(
+                        String.format(
+                            Locale.US, "%d",
+                            it[0].quantity
+                        )
+                    )
+                } else {
+                    binding.productID.text = "No Match"
+                }
+            }
+        }
+    }
+
 
 
     private fun recyclerSetup() {

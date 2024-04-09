@@ -13,7 +13,7 @@ class MyReceiver : BroadcastReceiver() {
         // This method is called when the BroadcastReceiver is receiving an Intent broadcast.
 
         val myName: String? = intent.getStringExtra("myName")
-        var message: String = "Broadcast intent detected " + intent.action +" no name sent"
+        var message: String = "Broadcast " + intent.action +" no name sent"
 
         //NOT IN BOOK BUT THIS IS HOW YOU WOULD RECEIVE DATA USING A BROADCAST RECEIVER
         myName?.let{

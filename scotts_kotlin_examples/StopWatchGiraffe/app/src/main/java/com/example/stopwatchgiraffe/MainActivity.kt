@@ -22,7 +22,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         binding.timeView.text = time.toString()
 
-        //I ATTEMPTED TO CALL THE START METHOD USING THE ONCLICK FROM THE XML WHICH WOULD CALL START(VIEW:VIEW) BUT I FOUND THAT WHEN I ATTEMPTED TO CALL IT FROM INCREMENTSECOND IT GENERATED AN ERROR.
+        //I ATTEMPTED TO CALL THE START METHOD USING THE ONCLICK FROM THE XML WHICH WOULD CALL
+        // START(VIEW:VIEW) BUT I FOUND THAT WHEN I ATTEMPTED TO CALL IT FROM INCREMENT SECOND
+        // IT GENERATED AN ERROR.
         binding.startButton.setOnClickListener {
             action = true
             start()
@@ -30,12 +32,15 @@ class MainActivity : AppCompatActivity() {
 
         binding.stopButton.setOnClickListener{
             action = false
-            //WHEN STOP IS CLICKED TIME MAY INCREASE ONE PREMATURELY THIS STOPS THAT (MOST OF THE TIME)
+            //WHEN STOP IS CLICKED TIME MAY INCREASE ONE PREMATURELY THIS STOPS
+            // THAT (MOST OF THE TIME)
             time--
         }
 
         binding.resetButton.setOnClickListener {
-            //I COULD ALSO SET ACTION TO FALSE AND IT WOULD TECHNICALLY WORK BUT THAT WOULD NOT CANCEL THE CO-ROUTINE SO INSTEAD I DID JOB?.CANCEL AS SHOWN BELOW
+            //I COULD ALSO SET ACTION TO FALSE AND IT WOULD TECHNICALLY WORK BUT THAT
+            // WOULD NOT CANCEL THE CO-ROUTINE SO INSTEAD I DID JOB?.CANCEL
+            // AS SHOWN BELOW
 
             //CANCELS THE JOB.
             job?.cancel()
@@ -47,6 +52,7 @@ class MainActivity : AppCompatActivity() {
 
     fun start() {
         binding.timeView.text = time.toString()
+        job?.cancel()
         //THIS HOLDS ON TO THE JOB OBJECT THAT IS RETURNED BY LAUNCH SO JOB CAN BE CANCELLED
         job = coroutineScope.launch(Dispatchers.Main) {
             incrementSecond()
