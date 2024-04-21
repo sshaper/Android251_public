@@ -15,7 +15,7 @@
         <receiver
             android:name=".MyReceiver"
             android:enabled="true"
-            android:exported="true"></receiver>
+            android:exported="true"/>
 
         <activity
             android:name=".MainActivity"

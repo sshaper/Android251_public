@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     suspend fun pause(){
-        delay(3000)
+        delay(1500)
         displayNamesNotBlocking()
     }
 

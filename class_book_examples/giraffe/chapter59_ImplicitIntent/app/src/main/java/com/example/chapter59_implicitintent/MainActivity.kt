@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun enableLink(view: View){
-        val intent = Intent(Settings.ACTION_APP_OPEN_BY_DEFAULT_SETTINGS, Uri.parse("package:com.ebookfrenzy.mywebview"))
+        val intent = Intent(Settings.ACTION_APP_OPEN_BY_DEFAULT_SETTINGS, Uri.parse("package:com.example.chapter59_mywebview"))
         startActivity(intent)
         //Log.i("zzz","it works")
     }

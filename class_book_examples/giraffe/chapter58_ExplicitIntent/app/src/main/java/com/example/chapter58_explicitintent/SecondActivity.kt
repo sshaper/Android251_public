@@ -17,6 +17,7 @@ class SecondActivity : AppCompatActivity() {
 
         val extras = intent.extras ?: return
         val qString = extras.getString("qString")
+
         binding.textView2.text = qString
     }
 

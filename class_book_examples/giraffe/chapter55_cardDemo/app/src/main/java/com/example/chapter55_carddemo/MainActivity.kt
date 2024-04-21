@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbar)
 
         layoutManager = LinearLayoutManager(this)
+
         binding.contentMain.recyclerView.layoutManager = layoutManager
         adapter = RecyclerAdapter()
         binding.contentMain.recyclerView.adapter = adapter

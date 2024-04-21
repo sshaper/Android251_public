@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">chapter40ViewModelDemo_basic</string>
+    <string name="app_name">chapter44ViewModelSaveStateV2</string>
     <string name="button">Convert</string>
     <string name="textView">Hello World!</string>
     <string name="inputDecimal">Enter Dollar Amount</string>
