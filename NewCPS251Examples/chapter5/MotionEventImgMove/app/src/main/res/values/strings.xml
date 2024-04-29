@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MotionEvent</string>
+    <string name="corr">Coordinates will appear here</string>
+</resources>

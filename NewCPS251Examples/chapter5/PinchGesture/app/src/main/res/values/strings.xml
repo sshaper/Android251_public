@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">PinchGesture</string>
+    <string name="scale">Image Size</string>
+</resources>
