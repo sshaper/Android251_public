@@ -2,6 +2,6 @@
 plugins {
     id("com.android.application") version "8.2.2" apply false
     id("org.jetbrains.kotlin.android") version "1.9.0" apply false
-    //I HAD TO USE 1.9.0-1.0.13 JEFF USED 1.9.0-1.0.14 BUT THAT DID NOT WORK FOR ME
+    //I HAD TO USE 1.9.0-1.0.13 OTHERS USED 1.9.0-1.0.14 BUT THAT DID NOT WORK FOR ME
     id("com.google.devtools.ksp") version "1.9.0-1.0.13" apply false
 }
