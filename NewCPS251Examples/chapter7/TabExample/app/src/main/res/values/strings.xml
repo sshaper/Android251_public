@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Tab and Menu Example</string>
+
+    <string name="action_settings">Click a Fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="tab_1_fragment">Tab 1 Fragment</string>
+    <string name="tab_2_fragment">Tab 2 Fragment</string>
+    <string name="tab_3_fragment">Tab 3 Fragment</string>
+    <string name="tab_4_fragment">Tab 4 Fragment</string>
+
+    <string name="fragment_1">Fragment 1</string>
+    <string name="fragment_2">Fragment 2</string>
+    <string name="fragment_3">Fragment 3</string>
+    <string name="fragment_4">Fragment 4</string>
+</resources>

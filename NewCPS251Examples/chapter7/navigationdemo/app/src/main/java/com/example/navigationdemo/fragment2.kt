@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
-import com.example.navigationdemo.databinding.Fragment1Binding
 import com.example.navigationdemo.databinding.Fragment2Binding
 
 class fragment2 : Fragment() {
@@ -23,9 +22,11 @@ class fragment2 : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.frag2Btn.setOnClickListener {
-
+            val action: fragment2Directions.Fragment2ToFragment3 = fragment2Directions.fragment2ToFragment3()
+             action.image = R.drawable.img
+             action.message2 = binding.frag2Textview.text.toString()
+            Navigation.findNavController(it).navigate(action)
         }
-
     }
 
     override fun onStart() {
@@ -35,6 +36,4 @@ class fragment2 : Fragment() {
             binding.frag2Textview.text = args.message1
         }
     }
-
-
 }

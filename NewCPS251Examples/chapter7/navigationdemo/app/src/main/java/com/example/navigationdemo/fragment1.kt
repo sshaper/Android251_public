@@ -8,8 +8,6 @@ import android.view.ViewGroup
 import androidx.navigation.Navigation
 import com.example.navigationdemo.databinding.Fragment1Binding
 
-
-
 class fragment1 : Fragment() {
 
     private var _binding: Fragment1Binding? = null
@@ -27,17 +25,15 @@ class fragment1 : Fragment() {
             val action: fragment1Directions.MainToFragment2 = fragment1Directions.mainToFragment2()
             action.message1 = binding.frag1Input.text.toString()
             Navigation.findNavController(it).navigate(action)
-            //Navigation.findNavController(it).navigate(R.id.main_to_fragment2)
         }
-/*
-        val action: FirstFragmentDirections.MainToSecond =
-            FirstFragmentDirections.mainToSecond()
-        action.message = binding.userText.text.toString()
-        Navigation.findNavController(it).navigate(action)*/
+
+        binding.frag1Btn2.setOnClickListener {
+            val action: fragment1Directions.MainToFragment3 = fragment1Directions.mainToFragment3()
+            action.message2 = binding.frag1Input.text.toString()
+            Navigation.findNavController(it).navigate(action)
+        }
 
     }
-
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

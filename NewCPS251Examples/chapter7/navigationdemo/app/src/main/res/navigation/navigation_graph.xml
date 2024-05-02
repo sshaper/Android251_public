@@ -29,10 +29,19 @@
         <argument
             android:name="message1"
             app:argType="string"
-            android:defaultValue="No Text In Box" />
+            android:defaultValue="Nothing Sent" />
     </fragment>
     <fragment
         android:id="@+id/fragment3"
         android:name="com.example.navigationdemo.fragment3"
-        android:label="fragment3" />
+        android:label="fragment3">
+        <argument
+            android:name="message2"
+            app:argType="string"
+            android:defaultValue="Nothing Sent" />
+        <argument
+            android:name="image"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
 </navigation>

@@ -1,4 +1,4 @@
-package com.ebookfrenzy.tablayoutdemo
+package com.example.tabexample
 
 import androidx.fragment.app.*
 import androidx.viewpager2.adapter.FragmentStateAdapter

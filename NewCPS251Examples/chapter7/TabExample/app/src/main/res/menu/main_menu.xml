@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/action_settings"/>
+
+    <item
+        android:id="@+id/nav_fragment1"
+        android:title="@string/fragment_1" />
+    <item
+        android:id="@+id/nav_fragment2"
+        android:title="@string/fragment_2" />
+    <item
+        android:id="@+id/nav_fragment3"
+        android:title="@string/fragment_3" />
+    <item
+        android:id="@+id/nav_fragment4"
+        android:title="@string/fragment_4" />
+</menu>
