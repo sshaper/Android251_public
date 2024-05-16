@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Broadcast Example</string>
+    <string name="welcome_message">Welcome to the Broadcast Example!</string>
+
+</resources>

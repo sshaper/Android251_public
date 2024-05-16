@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">LocalBound</string>
+    <string name="playBtn">Play</string>
+    <string name="pauseBtn">Pause</string>
+    <string name="stopBtn">Stop</string>
+    <string name="tvHeading">Local Bound</string>
+    <string name="tvTrackName">Track Name</string>
+    <string name="tvPlayTime">Play Time</string>
+</resources>
