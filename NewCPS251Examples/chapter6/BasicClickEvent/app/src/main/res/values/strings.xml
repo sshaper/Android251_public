@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">BasicClickEvent</string>
+    <string name="output">Response Here</string>
+    <string name="button1">XML Click</string>
+    <string name="button2">Kotlin Click</string>
+</resources>
