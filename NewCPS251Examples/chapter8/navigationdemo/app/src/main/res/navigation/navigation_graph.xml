@@ -3,45 +3,45 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_graph"
-    app:startDestination="@id/fragment1">
+    app:startDestination="@id/firstFragment">
 
     <fragment
-        android:id="@+id/fragment1"
-        android:name="com.example.navigationdemo.fragment1"
-        android:label="fragment_fragment1"
-        tools:layout="@layout/fragment1" >
+        android:id="@+id/firstFragment"
+        android:name="com.example.navigationdemo.FirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" >
         <action
-            android:id="@+id/main_to_fragment2"
-            app:destination="@id/fragment2" />
+            android:id="@+id/main_to_secondFragment"
+            app:destination="@id/secondFragment" />
         <action
-            android:id="@+id/main_to_fragment3"
-            app:destination="@id/fragment3" />
-
+            android:id="@+id/main_to_thirdFragment"
+            app:destination="@id/thirdFragment" />
     </fragment>
     <fragment
-        android:id="@+id/fragment2"
-        android:name="com.example.navigationdemo.fragment2"
-        android:label="fragment_fragment2"
-        tools:layout="@layout/fragment2" >
+        android:id="@+id/secondFragment"
+        android:name="com.example.navigationdemo.SecondFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second" >
         <action
-            android:id="@+id/fragment2_to_fragment3"
-            app:destination="@id/fragment3" />
+            android:id="@+id/secondFragment_to_thirdFragment"
+            app:destination="@id/thirdFragment" />
         <argument
             android:name="message1"
             app:argType="string"
             android:defaultValue="Nothing Sent" />
     </fragment>
     <fragment
-        android:id="@+id/fragment3"
-        android:name="com.example.navigationdemo.fragment3"
-        android:label="fragment3">
-        <argument
-            android:name="message2"
-            app:argType="string"
-            android:defaultValue="Nothing Sent" />
-        <argument
-            android:name="image"
-            app:argType="integer"
-            android:defaultValue="0" />
+        android:id="@+id/thirdFragment"
+        android:name="com.example.navigationdemo.ThirdFragment"
+        android:label="fragment_third"
+        tools:layout="@layout/fragment_third" >
+    <argument
+        android:name="message2"
+        app:argType="string"
+        android:defaultValue="Nothing Sent" />
+    <argument
+        android:name="image"
+        app:argType="integer"
+        android:defaultValue="0" />
     </fragment>
 </navigation>

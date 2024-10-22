@@ -21,4 +21,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "NavigationDemo"
 include(":app")
- 
