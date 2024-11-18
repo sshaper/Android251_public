@@ -6,6 +6,7 @@ plugins {
 android {
     buildFeatures{
         viewBinding=true
+        aidl=true
     }
 
     namespace = "com.example.musicplayerclient"
@@ -31,9 +32,6 @@ android {
         }
     }
 
-    buildFeatures{
-        aidl=true
-    }
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8

@@ -40,14 +40,12 @@ class MainActivity : AppCompatActivity() {
         binding.pauseButton.setOnClickListener { musicService?.pauseMusic() }
         binding.stopButton.setOnClickListener { musicService?.stopMusic() }
 
-        // Bind to the service
-        Intent(this, MusicService::class.java).also { intent ->
-            bindService(intent, connection, Context.BIND_AUTO_CREATE)
-        }
+        //could have bound to the service here as well. and not called on start.  On start was used incase the application is paused.
     }
 
     override fun onStart() {
         super.onStart()
+        //bind to the service
         Intent(this, MusicService::class.java).also { intent ->
             bindService(intent, connection, Context.BIND_AUTO_CREATE)
         }
@@ -70,6 +68,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    //Think of updateUITask as a "reminder card" for the system that says, "Run the updateUI() method whenever you get a chance." The handler or thread processes that reminder when it's time.
     private val updateUITask = Runnable { updateUI() }
 
     private fun formatTime(milliseconds: Int): String {

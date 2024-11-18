@@ -2,7 +2,7 @@
     <string name="app_name">ExplicitIntent</string>
     <string name="act1_textInput">Enter Text Here</string>
     <string name="act1_button">Send to Second Activity</string>
-    <string name="act1_textView">Second Text Sent Back</string>
+    <string name="act1_textView">This will display the text sent back from second activity</string>
     <string name="act2_textview">Received data will show here</string>
     <string name="act2_button">Return Response</string>
 </resources>

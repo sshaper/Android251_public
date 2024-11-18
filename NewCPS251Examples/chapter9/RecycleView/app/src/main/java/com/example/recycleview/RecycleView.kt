@@ -41,4 +41,5 @@ class RecyclerAdapter(private val data: Data) : RecyclerView.Adapter<RecyclerAda
     }
 
     override fun getItemCount(): Int = data.titles.size
+
 }

@@ -35,6 +35,7 @@ class FirstFragment : Fragment() {
             action.message2 = binding.firstFragInput.text.toString()
             Navigation.findNavController(it).navigate(action)
         }
+
     }
 
     override fun onDestroy() {
