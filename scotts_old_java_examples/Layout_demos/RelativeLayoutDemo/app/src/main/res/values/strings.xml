@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">RelativeLayoutDemo</string>
-    <string name="txt1">Text View 1</string>
-    <string name="txt2">Text View 2</string>
-    <string name="btn1">Button 1</string>
-    <string name="btn2">Button 2</string>
-    <string name="img1">Image</string>
-</resources>

@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">Dolphin Test</string>
-    <string name="mainfragment">0.0</string>
-    <string name="convert">Convert</string>
-    <string name="hint">Enter a currency value</string>
-</resources>

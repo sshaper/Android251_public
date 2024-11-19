@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">AudioApp</string>
-    <string name="play_text">Play</string>
-    <string name="record_text">Record</string>
-    <string name="stop_text">Stop</string>
-</resources>

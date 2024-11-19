@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="CycleEditor">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/CycleEditor.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

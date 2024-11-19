@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">AsyncTaskSeparateClass</string>
-    <string name="async">Do Async Task</string>
-    <string name="count">Increment Number</string>
-    <string name="helloworld">Hello World</string>
-    <string name="number">0</string>
-</resources>

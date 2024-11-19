@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">chapter58_ExplicitIntent</string>
-    <string name="textView1">Text View 1</string>
-    <string name="sendTextBtn1">Send Text 1</string>
-    <string name="editText1">Insert Text 1</string>
-    <string name="textView2">Text View 2</string>
-    <string name="sendTextBtn2">Send Text 2</string>
-    <string name="editText2">Insert Text 2</string>
-</resources>

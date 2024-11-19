@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">ExplicitIntent</string>
-    <string name="send_text">Send Text</string>
-    <string name="return_text">Return Text</string>
-    <string name="mainact">Main Activity</string>
-    <string name="secondact">Second Activity</string>
-</resources>

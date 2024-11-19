@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">AndroidSample</string>
-    <string name="convert_string">Convert</string>
-    <string name="dollars">dollars</string>
-    <string name="no_value_string">No Value</string>
-    <string name="hint">Enter Dollar Amount</string>
-</resources>

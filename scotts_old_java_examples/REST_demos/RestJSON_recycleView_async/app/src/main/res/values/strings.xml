@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">RestGoogle</string>
-    <string name="textview1">TextView</string>
-    <string name="textview2">TextView</string>
-    <string name="textview3">TextView</string>
-    <string name="expireMsg">Expires on: </string>
-
-</resources>

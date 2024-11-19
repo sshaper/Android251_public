@@ -1,5 +1,0 @@
-<resources>
-    <string name="app_name">Weather App</string>
-    <string name="getWeatherBtn">Get Weather</string>
-    <string name="zipEditText">Enter Zip Code</string>
-</resources>

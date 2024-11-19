@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">Coroutine Example</string>
-    <string name="name_here">Name Display Here</string>
-    <string name="number_here">0</string>
-    <string name="start_names">Start Names</string>
-    <string name="display_number">Display Number</string>
-</resources>

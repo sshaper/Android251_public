@@ -1,5 +1,0 @@
-<resources>
-    <string name="app_name">Intent Service</string>
-    <string name="btn2">Increment Number</string>
-    <string name="btn1">Start Service</string>
-</resources>
