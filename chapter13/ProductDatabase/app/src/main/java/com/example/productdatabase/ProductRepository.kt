@@ -6,8 +6,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import kotlinx.coroutines.*
 
-
-
 class ProductRepository (application: Application) {
     val searchResults = MutableLiveData<List<Product>>()
     private var productDao: ProductDao?
@@ -15,8 +13,7 @@ class ProductRepository (application: Application) {
     val allProducts: LiveData<List<Product>>?
 
     init {
-        val db: ProductRoomDatabase? =
-            ProductRoomDatabase.getDatabase(application)
+        val db: ProductRoomDatabase? = ProductRoomDatabase.getDatabase(application)
         productDao = db?.productDao()
         allProducts = productDao?.getAllProducts()
     }
