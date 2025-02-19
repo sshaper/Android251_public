@@ -26,9 +26,11 @@ class MainActivity : AppCompatActivity() {
                 val euroAmount = usdAmount * 0.93 // Example conversion rate
                 val formatter = DecimalFormat("#,###.00") // Format to two decimal places
                 tvResult.text = "€${formatter.format(euroAmount)}" // Display the formatted result in the TextView
+
             } else {
                 // Inform the user if the input was not a valid number
                 tvResult.text = "Please enter a valid amount"
+
             }
         }
     }

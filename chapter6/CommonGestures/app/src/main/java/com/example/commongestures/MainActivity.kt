@@ -1,6 +1,7 @@
 package com.example.commongestures
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import android.view.GestureDetector
 import android.view.MotionEvent
@@ -49,23 +50,31 @@ class MainActivity : AppCompatActivity(), GestureDetector.OnGestureListener, Ges
         binding.gestureStatusText.text = "onSingleTapUp"
         return true
     }
+    override fun onSingleTapConfirmed(event: MotionEvent): Boolean {
+        binding.gestureStatusText.text = "onSingleTapConfirmed"
+        return true
+    }
 
     override fun onDoubleTap(event: MotionEvent): Boolean {
         binding.gestureStatusText.text = "onDoubleTap"
         return true
     }
-    override fun onDoubleTapEvent(event: MotionEvent): Boolean {
-        binding.gestureStatusText.text = "onDoubleTapEvent"
+
+    //This one is outputted in LogCat because it moves so fast that you cannot see separate actions on the phone/emulator
+    override fun onDoubleTapEvent(e: MotionEvent): Boolean {
+        when (e.action) {
+            MotionEvent.ACTION_DOWN -> Log.d("Gesture", "Double tap ACTION_DOWN")
+            MotionEvent.ACTION_MOVE -> Log.d("Gesture", "Double tap ACTION_MOVE")
+            MotionEvent.ACTION_UP -> Log.d("Gesture", "Double tap ACTION_UP")
+        }
         return true
     }
-    override fun onSingleTapConfirmed(event: MotionEvent): Boolean {
-        binding.gestureStatusText.text = "onSingleTapConfirmed"
-        return true
-    }
+
     override fun onTouchEvent(event: MotionEvent): Boolean {
         this.gDetector?.onTouchEvent(event)
         // Be sure to call the superclass implementation
         return super.onTouchEvent(event)
+
     }
 
 }

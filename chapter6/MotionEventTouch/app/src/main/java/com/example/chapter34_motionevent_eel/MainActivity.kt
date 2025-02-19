@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
-    @SuppressLint("ClickableViewAccessibility")//this gets rid of accessibility warning (not in book)
+    @SuppressLint("ClickableViewAccessibility")//this gets rid of accessibility warning
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //not needed
@@ -44,9 +44,9 @@ class MainActivity : AppCompatActivity() {
             val id = m.getPointerId(i)
             val action = m.actionMasked
             val actionIndex = m.actionIndex
-            //var actionString: String  (book had this notice that we can use val when directly assigning)
 
-            //this is a recommended action from Android not in book
+
+            //this is a recommended action from Android
             val actionString: String = when (action) {
                 MotionEvent.ACTION_DOWN -> "DOWN"
                 MotionEvent.ACTION_UP -> "UP"
@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
                 else -> ""
             }
 
-            //I added the pointer count not in book
+
             val touchStatus =
                 "Pointer count: $pointerCount Action: $actionString Index: $actionIndex ID: $id X: $x Y: $y"
 
