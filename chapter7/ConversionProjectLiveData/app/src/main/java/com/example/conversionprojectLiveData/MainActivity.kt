@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnConvert.setOnClickListener {
             // Get the user input and convert it
-            val amount = binding.etAmount.text.toString().toDoubleOrNull() ?: return@setOnClickListener
+            val amount = binding.etAmount.text.toString().toDouble()
             viewModel.convertCurrency(amount)
         }
     }
