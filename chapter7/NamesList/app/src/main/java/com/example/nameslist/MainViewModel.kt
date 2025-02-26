@@ -13,7 +13,7 @@ class MainViewModel : ViewModel() {
 
     // LiveData holding the current name (now a String instead of MyUserModel)
     private val _name = MutableLiveData(names[0])
-    val name: LiveData<String> get() = _name
+    val name: LiveData<String> = _name
 
     // Handler to update name every second
     private val handler = Handler(Looper.getMainLooper())

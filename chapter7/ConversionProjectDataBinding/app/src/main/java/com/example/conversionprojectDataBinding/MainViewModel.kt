@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 class MainViewModel : ViewModel() {
     // LiveData to hold the formatted currency
     var _formattedCurrency = MutableLiveData<Double>()
+    var formattedCurrency = _formattedCurrency
     var _dollarValue = MutableLiveData<String>()
 
 

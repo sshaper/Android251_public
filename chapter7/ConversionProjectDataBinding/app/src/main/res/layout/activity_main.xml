@@ -47,7 +47,7 @@
             android:layout_marginTop="20dp"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:text='@{viewModel._formattedCurrency == 0.0 ? "Enter Value" : "€" + String.valueOf(viewModel._formattedCurrency)}'
+            android:text='@{viewModel.formattedCurrency == 0.0 ? "Enter Value" : "€" + String.valueOf(viewModel.formattedCurrency)}'
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintLeft_toLeftOf="parent"
