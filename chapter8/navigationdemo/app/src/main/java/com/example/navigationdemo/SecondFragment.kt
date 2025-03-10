@@ -26,7 +26,7 @@ class SecondFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.secondFragBtn.setOnClickListener {
             val action: SecondFragmentDirections.SecondFragmentToThirdFragment = SecondFragmentDirections.secondFragmentToThirdFragment()
-            action.image = R.drawable.img
+            action.image = R.drawable.bot
             action.message2 = binding.secondFragTextview.text.toString()
             Navigation.findNavController(it).navigate(action)
 
