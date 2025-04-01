@@ -6,6 +6,7 @@ import android.content.IntentFilter
 import android.hardware.camera2.CameraAccessException
 import android.hardware.camera2.CameraManager
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.broadcastreceiver.databinding.ActivityMainBinding
@@ -16,6 +17,12 @@ class MainActivity : AppCompatActivity() {
     private val torchCallback = object : CameraManager.TorchCallback() {
         override fun onTorchModeChanged(cameraId: String, enabled: Boolean) {
             showToast(if (enabled) "Flashlight is ON" else "Flashlight is OFF")
+            if (enabled) {
+                Log.i("Flashlight", "Flashlight is ON")
+            }
+            else {
+                Log.i("Flashlight", "Flashlight is OFF")
+            }
         }
     }
 
