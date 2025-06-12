@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">RestExample</string>
-    <string name="etZipCode">Enter Zip Code</string>
-    <string name="btnFetchWeather">Get Weather</string>
-    <string name="tvWeatherInfo">Other Weather Info appears here ...</string>
-    <string name="tvTemp">Temp</string>
-</resources>

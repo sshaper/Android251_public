@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">ConversionProject</string>
-    <string name="amount">Enter amount in USD</string>
-    <string name="button">Convert to Euro</string>
-    <string name="error">Please Enter a Valid Amount</string>
-</resources>

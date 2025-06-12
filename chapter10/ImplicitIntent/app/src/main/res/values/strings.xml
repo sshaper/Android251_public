@@ -1,5 +1,0 @@
-<resources>
-    <string name="app_name">ImplicitIntent</string>
-    <string name="input">Enter Text to Share</string>
-    <string name="button">Share Text</string>
-</resources>

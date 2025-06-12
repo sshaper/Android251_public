@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">musicplayerclient</string>
-    <string name="playBtn">Play</string>
-    <string name="pauseBtn">Pause</string>
-    <string name="stopBtn">Stop</string>
-    <string name="tvHeading">Remote Bound Client</string>
-    <string name="tvTrackName">Track Name</string>
-    <string name="tvPlayTime">Play Time</string>
-</resources>
