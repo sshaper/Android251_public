@@ -14,30 +14,27 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Settings
-import androidx.compose.material3.DrawerValue
-import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ModalNavigationDrawer
-import androidx.compose.material3.ModalDrawerSheet
-import androidx.compose.material3.NavigationDrawerItem
+import androidx.compose.material3.NavigationBar
+import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -63,80 +60,65 @@ object NavigationRoutes {
     const val SETTINGS = "settings"
 }
 
-// TopNavigation.kt
-@OptIn(ExperimentalMaterial3Api::class)
+// BottomNavigation.kt
 @Composable
-fun MainScreen() {
-    val navController = rememberNavController()
-    val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
-    val scope = rememberCoroutineScope()
+fun BottomNavigationBar(navController: NavController) {
     val currentRoute = navController.currentBackStackEntryAsState().value?.destination?.route
 
-    ModalNavigationDrawer(
-        drawerState = drawerState,
-        drawerContent = {
-            ModalDrawerSheet {
-                Text(
-                    "My App",
-                    modifier = Modifier.padding(16.dp),
-                    style = MaterialTheme.typography.headlineMedium
-                )
-                NavigationDrawerItem(
-                    icon = { Icon(Icons.Filled.Home, contentDescription = "Home") },
-                    label = { Text("Home") },
-                    selected = currentRoute == NavigationRoutes.HOME,
-                    onClick = {
-                        scope.launch {
-                            drawerState.close()
-                            navController.navigate(NavigationRoutes.HOME) {
-                                launchSingleTop = true
-                            }
-                        }
-                    }
-                )
-                NavigationDrawerItem(
-                    icon = { Icon(Icons.Filled.Person, contentDescription = "Profile") },
-                    label = { Text("Profile") },
-                    selected = currentRoute == NavigationRoutes.PROFILE,
-                    onClick = {
-                        scope.launch {
-                            drawerState.close()
-                            navController.navigate(NavigationRoutes.PROFILE) {
-                                launchSingleTop = true
-                            }
-                        }
-                    }
-                )
-                NavigationDrawerItem(
-                    icon = { Icon(Icons.Filled.Settings, contentDescription = "Settings") },
-                    label = { Text("Settings") },
-                    selected = currentRoute == NavigationRoutes.SETTINGS,
-                    onClick = {
-                        scope.launch {
-                            drawerState.close()
-                            navController.navigate(NavigationRoutes.SETTINGS) {
-                                launchSingleTop = true
-                            }
-                        }
-                    }
-                )
+    NavigationBar {
+        NavigationBarItem(
+            icon = { Icon(Icons.Filled.Home, contentDescription = "Home") },
+            label = { Text("Home") },
+            selected = currentRoute == NavigationRoutes.HOME,
+            onClick = {
+                navController.navigate(NavigationRoutes.HOME) {
+                    launchSingleTop = true
+                }
             }
-        }
-    ) {
-        Box(modifier = Modifier.fillMaxSize()) {
-            NavHost(
-                navController = navController,
-                startDestination = NavigationRoutes.HOME
-            ) {
-                composable(NavigationRoutes.HOME) { HomeScreen() }
-                composable(NavigationRoutes.PROFILE) { ProfileScreen() }
-                composable(NavigationRoutes.SETTINGS) { SettingsScreen() }
+        )
+        NavigationBarItem(
+            icon = { Icon(Icons.Filled.Person, contentDescription = "Profile") },
+            label = { Text("Profile") },
+            selected = currentRoute == NavigationRoutes.PROFILE,
+            onClick = {
+                navController.navigate(NavigationRoutes.PROFILE) {
+                    launchSingleTop = true
+                }
             }
-        }
+        )
+        NavigationBarItem(
+            icon = { Icon(Icons.Filled.Settings, contentDescription = "Settings") },
+            label = { Text("Settings") },
+            selected = currentRoute == NavigationRoutes.SETTINGS,
+            onClick = {
+                navController.navigate(NavigationRoutes.SETTINGS) {
+                    launchSingleTop = true
+                }
+            }
+        )
     }
 }
 
 // MainScreen.kt
+@Composable
+fun MainScreen() {
+    val navController = rememberNavController()
+
+    Scaffold(
+        bottomBar = { BottomNavigationBar(navController) }
+    ) { paddingValues ->
+        NavHost(
+            navController = navController,
+            startDestination = NavigationRoutes.HOME,
+            modifier = Modifier.padding(paddingValues)
+        ) {
+            composable(NavigationRoutes.HOME) { HomeScreen() }
+            composable(NavigationRoutes.PROFILE) { ProfileScreen() }
+            composable(NavigationRoutes.SETTINGS) { SettingsScreen() }
+        }
+    }
+}
+
 @Composable
 fun HomeScreen() {
     Box(
